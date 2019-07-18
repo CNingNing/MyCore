@@ -1,0 +1,2 @@
+# MyCore
+myCore
