@@ -6,13 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Component/1.0.0": {
+      "TestCore/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Json": "2.2.0",
-          "StackExchange.Redis": "2.0.601"
+          "Component": "1.0.0"
         },
         "runtime": {
-          "Component.dll": {}
+          "TestCore.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/2.2.0": {
@@ -264,11 +263,20 @@
             "fileVersion": "4.6.26515.6"
           }
         }
+      },
+      "Component/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "StackExchange.Redis": "2.0.601"
+        },
+        "runtime": {
+          "Component.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Component/1.0.0": {
+    "TestCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -433,6 +441,11 @@
       "sha512": "sha512-61eqqmreCig10E4OhJ0/6VaoxR5DR0s+YcerLeP4I36Ua5I9F+AH4UVFfpccUnu2QWDqZvqCPhsMvOIZGlYSZA==",
       "path": "system.threading.channels/4.5.0",
       "hashPath": "system.threading.channels.4.5.0.nupkg.sha512"
+    },
+    "Component/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

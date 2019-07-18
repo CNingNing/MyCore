@@ -8,7 +8,7 @@ namespace Component.Extension
     public  class RedisHelper
     {
 
-        private static readonly string con = "127.0.0.1:6379";
+     
         
 
 
