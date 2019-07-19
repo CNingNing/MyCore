@@ -1,2 +1,0 @@
-# MyCore
-myCore

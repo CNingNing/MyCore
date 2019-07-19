@@ -1,6 +1,0 @@
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.csprojAssemblyReference.cache
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.csproj.CoreCompileInputs.cache
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.RazorAssemblyInfo.cache
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.RazorAssemblyInfo.cs
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.AssemblyInfoInputs.cache
-D:\Project\myCore\MyCore\MyCore\obj\Debug\netcoreapp2.1\MyCore.AssemblyInfo.cs
