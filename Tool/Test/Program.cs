@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using Component.Extension;
+using Microsoft.Extensions.Configuration;
 
 namespace Test
 {
@@ -11,14 +12,23 @@ namespace Test
     {
         public const string appkey= "wx9ca6cb740514ee2c";
         public const string appsecret = "fe71874b2c7082c4ae29b27649995de1";
-       
+
+        private static IConfiguration _configuration;
         static void Main(string[] args)
         {
+            var path = AppContext.BaseDirectory;
+   
+         
 
-            var redis = new CSRedis.CSRedisClient("127.0.0.1:6379");
-            redis.Set("myning","2227");
-            Console.WriteLine(redis.Get("myning"));
-            
+            path = path.Substring(0, path.IndexOf("\\bin"));
+
+            var config = $"{path}\\database.json";
+
+            _configuration = new ConfigurationBuilder().AddJsonFile(config, false, true).Build();
+
+           var data= _configuration.GetSection("Database:User:ConnnectString").Value;
+
+            Console.WriteLine(data);
 
             //var url =
             // string.Format(

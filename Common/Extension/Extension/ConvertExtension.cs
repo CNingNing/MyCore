@@ -116,7 +116,7 @@ namespace Component.Extension
             {
                 if (string.IsNullOrEmpty(input))
                     return default(T);
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(input);
+                return JsonConvert.DeserializeObject<T>(input);
             }
             catch (Exception ex)
             {
@@ -471,7 +471,7 @@ namespace Component.Extension
             long i = 1;
             foreach (byte b in buffer)
             {
-                i *= ((int)b + 1);
+                i *= b + 1;
             }
             return string.Format("{0:x}", i -(new DateTime(2000,01,01).Ticks));
 
