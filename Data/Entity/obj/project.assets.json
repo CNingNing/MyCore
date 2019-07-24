@@ -182,11 +182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\core\\Core\\Data\\Entity\\Entity.csproj",
+      "projectUniqueName": "D:\\core\\MyCore\\Data\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "D:\\core\\Core\\Data\\Entity\\Entity.csproj",
+      "projectPath": "D:\\core\\MyCore\\Data\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\Uncle Xu\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\Core\\Data\\Entity\\obj\\",
+      "outputPath": "D:\\core\\MyCore\\Data\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

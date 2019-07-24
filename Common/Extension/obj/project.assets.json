@@ -553,11 +553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\core\\Core\\Common\\Extension\\Component.csproj",
+      "projectUniqueName": "D:\\core\\MyCore\\Common\\Extension\\Component.csproj",
       "projectName": "Component",
-      "projectPath": "D:\\core\\Core\\Common\\Extension\\Component.csproj",
+      "projectPath": "D:\\core\\MyCore\\Common\\Extension\\Component.csproj",
       "packagesPath": "C:\\Users\\Uncle Xu\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\Core\\Common\\Extension\\obj\\",
+      "outputPath": "D:\\core\\MyCore\\Common\\Extension\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

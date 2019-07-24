@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\core\\Core\\Web\\Hr\\HrWebsite\\HrWebsite.csproj",
+      "projectUniqueName": "D:\\core\\MyCore\\Web\\Hr\\HrWebsite\\HrWebsite.csproj",
       "projectName": "HrWebsite",
-      "projectPath": "D:\\core\\Core\\Web\\Hr\\HrWebsite\\HrWebsite.csproj",
+      "projectPath": "D:\\core\\MyCore\\Web\\Hr\\HrWebsite\\HrWebsite.csproj",
       "packagesPath": "C:\\Users\\Uncle Xu\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\Core\\Web\\Hr\\HrWebsite\\obj\\",
+      "outputPath": "D:\\core\\MyCore\\Web\\Hr\\HrWebsite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

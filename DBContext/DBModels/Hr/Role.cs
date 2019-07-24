@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DBModels.Hr
 {
-    public class User
+    public class Role
     {
         [Key]
         public int Id { get; set; }
@@ -13,19 +13,7 @@ namespace DBModels.Hr
         /// 用户名
         /// </summary>
         [MaxLength(30),Required]
-        public string UserName { get; set; }
-        /// <summary>
-        /// 密码
-        /// </summary>
-        [MaxLength(30), Required]
-        public string Password { get; set; }
-        [MaxLength(30)]
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        /// <summary>
-        /// 角色Id
-        /// </summary>
-        public Role Role { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// 版本号
         /// </summary>

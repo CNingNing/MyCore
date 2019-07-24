@@ -20,7 +20,7 @@ namespace DBModels.Hr
         {
             if(!optionsBuilder.IsConfigured)
             {
-                var dbcontext = DbConnnectString.GetDatabase("Hr");
+                var dbcontext = DbConnnectString.GetDatabase("CoreHr");
                 optionsBuilder.UseSqlServer(dbcontext);
             }
         }
@@ -30,8 +30,17 @@ namespace DBModels.Hr
             modelBuilder.HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("t_hr_user0");
+                entity.ToTable("t_hr_user");
             });
+            modelBuilder.Entity<Authority>(entity =>
+            {
+                entity.ToTable("t_hr_authority");
+            });
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.ToTable("t_hr_role");
+            });
+       
         }
     }
 }

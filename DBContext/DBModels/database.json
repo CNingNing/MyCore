@@ -1,6 +1,6 @@
 {
   "User": {
-    "ConnnectString": "server=172.18.24.159;uid=sa;pwd=sa;database=CoreHr;Pooling=true;"
+    "ConnnectString": "server=.;uid=sa;pwd=123456;database=CoreHr;Pooling=true;"
   }
 
 }

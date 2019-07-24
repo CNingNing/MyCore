@@ -12,3 +12,17 @@ D:\core\Core\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.AssemblyInfo.cs
 D:\core\Core\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.RazorTargetAssemblyInfo.cache
 D:\core\Core\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.dll
 D:\core\Core\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.pdb
+D:\core\MyCore\Web\Hr\HrApi\bin\Debug\netcoreapp2.1\HrApi.deps.json
+D:\core\MyCore\Web\Hr\HrApi\bin\Debug\netcoreapp2.1\HrApi.runtimeconfig.json
+D:\core\MyCore\Web\Hr\HrApi\bin\Debug\netcoreapp2.1\HrApi.runtimeconfig.dev.json
+D:\core\MyCore\Web\Hr\HrApi\bin\Debug\netcoreapp2.1\HrApi.dll
+D:\core\MyCore\Web\Hr\HrApi\bin\Debug\netcoreapp2.1\HrApi.pdb
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.csprojAssemblyReference.cache
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.csproj.CoreCompileInputs.cache
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.RazorAssemblyInfo.cache
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.RazorAssemblyInfo.cs
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.AssemblyInfoInputs.cache
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.AssemblyInfo.cs
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.RazorTargetAssemblyInfo.cache
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.dll
+D:\core\MyCore\Web\Hr\HrApi\obj\Debug\netcoreapp2.1\HrApi.pdb

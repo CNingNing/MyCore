@@ -12,3 +12,17 @@ D:\core\Core\Tool\Test\obj\Debug\netcoreapp2.1\Test.pdb
 D:\core\Core\Tool\Test\bin\Debug\netcoreapp2.1\Component.dll
 D:\core\Core\Tool\Test\bin\Debug\netcoreapp2.1\Component.pdb
 D:\core\Core\Tool\Test\obj\Debug\netcoreapp2.1\Test.csproj.CopyComplete
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\Test.deps.json
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\Test.runtimeconfig.json
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\Test.runtimeconfig.dev.json
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\Test.dll
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\Test.pdb
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\DBModels.dll
+D:\core\MyCore\Tool\Test\bin\Debug\netcoreapp2.1\DBModels.pdb
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.csprojAssemblyReference.cache
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.csproj.CoreCompileInputs.cache
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.AssemblyInfoInputs.cache
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.AssemblyInfo.cs
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.csproj.CopyComplete
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.dll
+D:\core\MyCore\Tool\Test\obj\Debug\netcoreapp2.1\Test.pdb

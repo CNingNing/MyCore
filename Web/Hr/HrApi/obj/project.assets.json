@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\core\\Core\\Web\\Hr\\HrApi\\HrApi.csproj",
+      "projectUniqueName": "D:\\core\\MyCore\\Web\\Hr\\HrApi\\HrApi.csproj",
       "projectName": "HrApi",
-      "projectPath": "D:\\core\\Core\\Web\\Hr\\HrApi\\HrApi.csproj",
+      "projectPath": "D:\\core\\MyCore\\Web\\Hr\\HrApi\\HrApi.csproj",
       "packagesPath": "C:\\Users\\Uncle Xu\\.nuget\\packages\\",
-      "outputPath": "D:\\core\\Core\\Web\\Hr\\HrApi\\obj\\",
+      "outputPath": "D:\\core\\MyCore\\Web\\Hr\\HrApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
