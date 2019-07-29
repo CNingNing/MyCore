@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using DBModels;
+using DBModels.Hr;
+using Microsoft.EntityFrameworkCore;
 
 namespace HrWebsite
 {
@@ -33,6 +36,11 @@ namespace HrWebsite
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //通过code first 建立数据库
+            services.AddDbContext<DBModels.Hr.HrContext>(options => options.UseSqlServer(DbConnnectString.GetDatabase("Hr")));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace DBModels.Hr
 {
-    public class User
+    public class User : BaseTable
     {
         [Key]
-        public int Id { get; set; }
+        public long Id { get; set; }
         /// <summary>
         /// 用户名
         /// </summary>
@@ -19,17 +19,25 @@ namespace DBModels.Hr
         /// </summary>
         [MaxLength(30), Required]
         public string Password { get; set; }
+        /// <summary>
+        /// 邮箱
+        /// </summary>
         [MaxLength(30)]
         public string Email { get; set; }
+        /// <summary>
+        /// 联系方式
+        /// </summary>
+        [MaxLength(30)]
         public string Phone { get; set; }
         /// <summary>
-        /// 角色Id
+        /// 头像
         /// </summary>
-        public Role Role { get; set; }
+        [MaxLength(2000)]
+        public byte[] Image { get; set; }
         /// <summary>
-        /// 版本号
+        /// 是否启用
         /// </summary>
-        [MaxLength(1)]
-        public int Mark { get; set; } = 1;
+        public bool Status { get; set; } = true;
+      
     }
 }

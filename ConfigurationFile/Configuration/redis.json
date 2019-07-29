@@ -1,0 +1,6 @@
+{
+  "Redis": {
+    "ConnnectString": "server=.;uid=sa;pwd=123456;database=CoreHr;Pooling=true;"
+  }
+
+}

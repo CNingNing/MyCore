@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
-
 using Microsoft.Extensions.Configuration;
-using DBModels.Hr;
-using DBModels;
+
+
+
 namespace Test
 {
     class Program
@@ -17,9 +16,18 @@ namespace Test
         private static IConfiguration _configuration;
         static void Main(string[] args)
         {
-            
-            var a=   DbConnnectString.GetDatabase("User");
-            Console.WriteLine(a);
+            var path = AppContext.BaseDirectory;
+            if (path.IndexOf("\\bin") > 0)
+            {
+                path = path.Substring(0, path.IndexOf("\\bin"));
+            }
+            var filename = $"{path}\\DBContext\\DBModels\\database.json";
+            if(!File.Exists(filename))
+            {
+
+            }
+
+            Console.WriteLine(path);
 
         }
         /// <summary>
