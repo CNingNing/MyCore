@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DBModels.Migrations
 {
-    [DbContext(typeof(HrContext))]
+    [DbContext(typeof(WarehouseContext))]
     [Migration("20190729105849_DBHrLog")]
     partial class DBHrLog
     {

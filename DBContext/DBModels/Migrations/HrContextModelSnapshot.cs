@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DBModels.Migrations
 {
-    [DbContext(typeof(HrContext))]
+    [DbContext(typeof(WarehouseContext))]
     partial class HrContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

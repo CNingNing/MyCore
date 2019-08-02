@@ -12,7 +12,7 @@ namespace DBModels.Hr
         /// <summary>
         /// 用户名
         /// </summary>
-        [MaxLength(30),Required]
+        [MaxLength(30), Required]
         public string UserName { get; set; }
         /// <summary>
         /// 密码
@@ -38,6 +38,9 @@ namespace DBModels.Hr
         /// 是否启用
         /// </summary>
         public bool Status { get; set; } = true;
-      
+        /// <summary>
+        /// 用户角色
+        /// </summary>
+        public List<UserRole> UserRoles { get; set; }
     }
 }

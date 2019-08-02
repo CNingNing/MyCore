@@ -10,15 +10,13 @@ namespace DBModels.Hr
         [Key]
         public long Id { get; set; }
         /// <summary>
-        /// 角色Id
-        /// </summary>
-        [MaxLength(18),Required]
-        public List<Role> Role { get; set; }
-        /// <summary>
         /// 权限内容
         /// </summary>
        [MaxLength(1000),Required]
         public string AbilityName { get; set; }
-    
+       /// <summary>
+       /// 
+       /// </summary>
+        public string Url { get; set; }
     }
 }

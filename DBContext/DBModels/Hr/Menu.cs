@@ -17,6 +17,10 @@ namespace DBModels.Hr
         /// </summary>
        [MaxLength(1000),Required]
         public string MenuName { get; set; }
+        /// <summary>
+        /// 父级ID
+        /// </summary>
+        public long ParentMenuId { get; set; }
 
         public Menu ParentMenu { get; set; } = new Menu { Id = 0 };
     }

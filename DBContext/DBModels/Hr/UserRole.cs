@@ -10,6 +10,16 @@ namespace DBModels.Hr
         [Key]
         public long Id { get; set; }
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [Required]
+        public long UserId { get; set; }
+        /// <summary>
+        /// 角色ID
+        /// </summary>
+        [Required]
+        public long RoleId { get; set; }
+        /// <summary>
         /// 用户列表
         /// </summary>
         public List<User> Users { get; set; }

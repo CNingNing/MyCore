@@ -1,6 +1,8 @@
 {
   "Hr": {
     "ConnnectString": "server=.;uid=sa;pwd=123456;database=CoreHr;Pooling=true;"
+  },
+  "Warehouse": {
+    "ConnnectString": "server=.;uid=sa;pwd=123456;database=CoreWarehouse;Pooling=true;"
   }
-
 }
