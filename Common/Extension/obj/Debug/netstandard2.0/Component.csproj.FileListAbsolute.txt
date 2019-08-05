@@ -7,12 +7,3 @@ D:\core\Core\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfo.cs
 D:\core\Core\Common\Extension\obj\Debug\netstandard2.0\Component.dll
 D:\core\Core\Common\Extension\obj\Debug\netstandard2.0\Component.pdb
 D:\core\Core\Common\Extension\obj\Debug\netstandard2.0\Component.csprojAssemblyReference.cache
-D:\core\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.deps.json
-D:\core\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.dll
-D:\core\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.pdb
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.csprojAssemblyReference.cache
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.csproj.CoreCompileInputs.cache
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfoInputs.cache
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfo.cs
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.dll
-D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.pdb

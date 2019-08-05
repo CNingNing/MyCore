@@ -6,4 +6,3 @@ D:\core\MyCore\DBContext\DBModels\bin\Debug\netcoreapp2.1\DBModels.dll
 D:\core\MyCore\DBContext\DBModels\bin\Debug\netcoreapp2.1\DBModels.pdb
 D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.dll
 D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.pdb
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.csprojAssemblyReference.cache

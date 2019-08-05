@@ -38,7 +38,7 @@ namespace HrWebsite
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             //通过code first 建立数据库
-            services.AddDbContext<DBModels.Hr.WarehouseContext>(options => options.UseSqlServer(DbConnnectString.GetDatabase("Hr")));
+            services.AddDbContext<DBModels.Hr.HrContext>(options => options.UseSqlServer(DbConnnectString.GetDatabase("Hr")));
 
 
         }

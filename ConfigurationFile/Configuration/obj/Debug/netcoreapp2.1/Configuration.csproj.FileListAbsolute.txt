@@ -1,9 +1,0 @@
-D:\core\MyCore\ConfigurationFile\Configuration\bin\Debug\netcoreapp2.1\Configuration.deps.json
-D:\core\MyCore\ConfigurationFile\Configuration\bin\Debug\netcoreapp2.1\Configuration.dll
-D:\core\MyCore\ConfigurationFile\Configuration\bin\Debug\netcoreapp2.1\Configuration.pdb
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.csprojAssemblyReference.cache
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.csproj.CoreCompileInputs.cache
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.AssemblyInfoInputs.cache
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.AssemblyInfo.cs
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.dll
-D:\core\MyCore\ConfigurationFile\Configuration\obj\Debug\netcoreapp2.1\Configuration.pdb
