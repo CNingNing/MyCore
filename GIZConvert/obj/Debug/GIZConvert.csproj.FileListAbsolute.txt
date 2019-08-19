@@ -1,0 +1,10 @@
+D:\core\MyCore\GIZConvert\bin\Debug\GIZConvert.exe.config
+D:\core\MyCore\GIZConvert\bin\Debug\GIZConvert.exe
+D:\core\MyCore\GIZConvert\bin\Debug\GIZConvert.pdb
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.csprojAssemblyReference.cache
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.Form1.resources
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.Properties.Resources.resources
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.GenerateResource.cache
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.CoreCompileInputs.cache
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.exe
+D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.pdb

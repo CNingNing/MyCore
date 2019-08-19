@@ -589,16 +589,12 @@
         </aside>
         <div class="themes">
             <div class="scrollbar">
-                <a href="#" class="themes__item active" data-sa-value="1"><img src="js/img/bg/1.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="2"><img src="js/img/bg/2.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="3"><img src="js/img/bg/3.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="4"><img src="js/img/bg/4.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="5"><img src="js/img/bg/5.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="6"><img src="js/img/bg/6.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="7"><img src="js/img/bg/7.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="8"><img src="js/img/bg/8.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="9"><img src="js/img/bg/9.jpg" alt=""></a>
-                <a href="#" class="themes__item" data-sa-value="10"><img src="js/img/bg/10.jpg" alt=""></a>
+                @for (var i = 1; i <= 10; i++)
+                {
+                    <a href="#" class="themes__item @(i==1?"active":"")" data-sa-value="@i"><img src="js/img/bg/@(i).jpg" alt=""></a>
+                }
+
+            
             </div>
         </div>
 
@@ -1094,40 +1090,7 @@
         </section>
     </main>
 
-    <!-- Older IE warning message -->
-    <!--[if IE]>
-        <div class="ie-warning">
-            <h1>Warning!!</h1>
-            <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
-
-            <div class="ie-warning__downloads">
-                <a href="http://www.google.com/chrome">
-                    <img src="img/browsers/chrome.png" alt="">
-                </a>
-
-                <a href="https://www.mozilla.org/en-US/firefox/new">
-                    <img src="img/browsers/firefox.png" alt="">
-                </a>
-
-                <a href="http://www.opera.com">
-                    <img src="img/browsers/opera.png" alt="">
-                </a>
-
-                <a href="https://support.apple.com/downloads/safari">
-                    <img src="img/browsers/safari.png" alt="">
-                </a>
-
-                <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
-                    <img src="img/browsers/edge.png" alt="">
-                </a>
-
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="img/browsers/ie.png" alt="">
-                </a>
-            </div>
-            <p>Sorry for the inconvenience!</p>
-        </div>
-    <![endif]-->
+  
     <!-- Javascript -->
     <!-- Vendors -->
     <script src="js/vendors/jquery/jquery.min.js"></script>

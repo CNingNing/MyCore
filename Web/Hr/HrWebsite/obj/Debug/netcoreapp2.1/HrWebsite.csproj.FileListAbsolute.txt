@@ -63,3 +63,4 @@ D:\core\MyCore\Web\Hr\HrWebsite\bin\Debug\netcoreapp2.1\DBModels.dll
 D:\core\MyCore\Web\Hr\HrWebsite\bin\Debug\netcoreapp2.1\DBModels.pdb
 D:\core\MyCore\Web\Hr\HrWebsite\obj\Debug\netcoreapp2.1\HrWebsite.Views.pdb
 D:\core\MyCore\Web\Hr\HrWebsite\obj\Debug\netcoreapp2.1\HrWebsite.csproj.CopyComplete
+D:\core\MyCore\Web\Hr\HrWebsite\obj\Debug\netcoreapp2.1\Razor\Views\Role\Index.g.cshtml.cs

@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Extension\Component.csproj" />
     <ProjectReference Include="..\..\DBContext\DBModels\DBModels.csproj" />
   </ItemGroup>
 
