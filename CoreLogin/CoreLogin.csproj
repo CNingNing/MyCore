@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Component.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Extension\Component.csproj" />
   </ItemGroup>
 
 </Project>

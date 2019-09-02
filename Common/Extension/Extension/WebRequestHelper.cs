@@ -204,11 +204,22 @@ namespace Component.Extension
             myReq.Method = "POST";
             return SendRequest(myReq, encoding, content,false);
         }
-     
-        #endregion
 
+        #endregion
+        public static string GetResponse(WebRequest request, string encoding)
+        {
+            using (WebResponse response = request.GetResponse())
+            {
+                var stream = response.GetResponseStream();
+                if (stream == null) return null;
+                using (var reader = new StreamReader(stream, Encoding.GetEncoding(encoding)))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
         #region 证书服务
-      
+
         /// <summary>
         /// 创建带证书设置的httpwebrequest
         /// </summary>

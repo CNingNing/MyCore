@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Caching.CSRedis/3.0.51": {
+        "type": "package",
+        "dependencies": {
+          "CSRedisCore": "3.0.51",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Caching.CSRedis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Caching.CSRedis.dll": {}
+        }
+      },
+      "CSRedisCore/3.0.64": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "SafeObjectPool": "2.0.2",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/CSRedisCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CSRedisCore.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -1708,7 +1735,7 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
+      "Microsoft.Extensions.Caching.Abstractions/2.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.1.1"
@@ -2616,7 +2643,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2864,6 +2891,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "SafeObjectPool/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SafeObjectPool.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SafeObjectPool.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -4182,18 +4218,13 @@
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
         }
       },
-      "System.ValueTuple/4.3.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Xml.ReaderWriter/4.3.0": {
@@ -4333,10 +4364,51 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Component/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CSRedisCore": "3.0.64",
+          "Caching.CSRedis": "3.0.51",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/Component.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Component.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Caching.CSRedis/3.0.51": {
+      "sha512": "rJKpub3bLKfwgb9Y2rBoOFzPJu0LnJNO+MOKn4VxPUxB+t2Dg7y3mZnemjWm0kXPbqAZV2K1o1+a08wWnEh0VA==",
+      "type": "package",
+      "path": "caching.csredis/3.0.51",
+      "files": [
+        ".signature.p7s",
+        "caching.csredis.3.0.51.nupkg.sha512",
+        "caching.csredis.nuspec",
+        "lib/netstandard2.0/Caching.CSRedis.dll",
+        "lib/netstandard2.0/Caching.CSRedis.xml"
+      ]
+    },
+    "CSRedisCore/3.0.64": {
+      "sha512": "cSM5a5aq19/yYA1jz8SzPhLLCnyktpULAPEA6WuPAekszoU4IM15AjEnOk0TFu5goC8bfJYq+buCEQtReff3Gw==",
+      "type": "package",
+      "path": "csrediscore/3.0.64",
+      "files": [
+        ".signature.p7s",
+        "csrediscore.3.0.64.nupkg.sha512",
+        "csrediscore.nuspec",
+        "lib/net45/CSRedisCore.dll",
+        "lib/net45/CSRedisCore.xml",
+        "lib/netstandard2.0/CSRedisCore.dll",
+        "lib/netstandard2.0/CSRedisCore.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "rMDlyePoxggkmN/qgha1+BR2Uy+dOr38xKCQOPfVNKGY07R2nYJGMTKJFE1XFgwD70RYUNazf2fqutjJF18XgQ==",
       "type": "package",
@@ -5752,15 +5824,15 @@
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
-    "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
-      "sha512": "gcPRTtchou4pIEdLYhh9xoBDjwCaCLiTHJaFN2IWJCP+TGJcIHQYblPMftw6fajHER9ZrvPO5RYZUyLmH1eNIA==",
+    "Microsoft.Extensions.Caching.Abstractions/2.1.2": {
+      "sha512": "1grj/VyEAX2DSxIDyTADPfXnESj33RNvK0Lo1ob1awZA9JDMzmOsS3DC5nOOp74Kcb/4VfcOVFe8YG1ySs156w==",
       "type": "package",
-      "path": "microsoft.extensions.caching.abstractions/2.1.1",
+      "path": "microsoft.extensions.caching.abstractions/2.1.2",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
-        "microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.2.1.2.nupkg.sha512",
         "microsoft.extensions.caching.abstractions.nuspec"
       ]
     },
@@ -6894,11 +6966,12 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
+        ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -6918,7 +6991,7 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -7199,6 +7272,20 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SafeObjectPool/2.0.2": {
+      "sha512": "9RW1PHNsZSX8GRxJPHspvA3AyV61iv4cDUKrtjJS2I61rV+e3G8s3hDoHQgo0XkeNSYbI1n4UmPX6VpAeofjQA==",
+      "type": "package",
+      "path": "safeobjectpool/2.0.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/SafeObjectPool.dll",
+        "lib/net45/SafeObjectPool.xml",
+        "lib/netstandard2.0/SafeObjectPool.dll",
+        "lib/netstandard2.0/SafeObjectPool.xml",
+        "safeobjectpool.2.0.2.nupkg.sha512",
+        "safeobjectpool.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -11159,19 +11246,47 @@
         "system.threading.thread.nuspec"
       ]
     },
-    "System.ValueTuple/4.3.0": {
-      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
       "type": "package",
-      "path": "system.valuetuple/4.3.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/.xml",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "system.valuetuple.4.3.0.nupkg.sha512",
-        "system.valuetuple.nuspec"
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Xml.ReaderWriter/4.3.0": {
@@ -11491,10 +11606,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Component/1.0.0": {
+      "type": "project",
+      "path": "../Common/Extension/Component.csproj",
+      "msbuildProject": "../Common/Extension/Component.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Component >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -11528,7 +11649,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\core\\MyCore\\Common\\Extension\\Component.csproj": {
+              "projectPath": "D:\\core\\MyCore\\Common\\Extension\\Component.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
