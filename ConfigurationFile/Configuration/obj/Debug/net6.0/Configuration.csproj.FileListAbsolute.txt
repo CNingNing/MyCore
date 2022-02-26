@@ -9,3 +9,9 @@ D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configura
 D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.dll
 D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\ref\Configuration.dll
 D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.pdb
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.csproj.AssemblyReference.cache
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Component.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Winner.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Component.pdb
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Winner.pdb
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.csproj.CopyComplete

@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddMvc().AddNewtonsoftJson();
+builder.Services.AddCors(); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +27,7 @@ app.UseRouting();
 //    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 //});
 app.UseAuthorization();
+app.UseCors(configurePolicy => configurePolicy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
 app.MapControllerRoute(
     name: "default",

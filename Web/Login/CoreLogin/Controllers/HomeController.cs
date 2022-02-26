@@ -4,24 +4,52 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using WebCore.Bases;
 using System.Net;
 using Component.Extension;
 using System.Text.RegularExpressions;
+using WebCore.Extension;
 
 namespace CoreLogin.Controllers
 {
 
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        public const string appId = "";
-        public const string appSecret = "";
-        public const string redirecturl = "";
+        public const string Name = "nprong";
+        public const string Password = "ning@!@#";
+        public const string Redirecturl = "";
+        public const string AppId = "";
+        public const string AppSecret = "";
         public virtual IActionResult Index()
         {
             return View();
         }
+
+        public virtual IActionResult CheckLogin()
+        {
+            var dic=new Dictionary<string, object>();
+            var loginName = HttpContext.Request.Form.ContainsKey("LoginName") ? HttpContext.Request.Form["LoginName"].ToString() : "";
+            var loginPassword = HttpContext.Request.Form.ContainsKey("LoginPassword") ? HttpContext.Request.Form["LoginPassword"].ToString() : "";
+            if(string.IsNullOrEmpty(loginName) || string .IsNullOrWhiteSpace(loginPassword))
+            {
+                dic.Add("Status", false);
+                dic.Add("Message", "账号或密码不可为空！");
+                return this.Jsonp(dic);
+            }
+            if (loginName!=Name || loginPassword!=Password)
+            {
+                dic.Add("Status", false);
+                dic.Add("Message", "账号或密码错误，请重新输入！");
+                return this.Jsonp(dic);
+            }
+            var url = "www.nprong.com";
+            RedirectResult result = new(url);
+            return result;
+
+        }
+
+
         #region QQ登陆
         /// <summary>
         /// 打开qq授权页面
@@ -31,7 +59,7 @@ namespace CoreLogin.Controllers
         {
             var url = string.Format(
                      "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id={0}&redirect_uri={1}&state=State",
-                     appId, WebUtility.UrlEncode(redirecturl));
+                     AppId, WebUtility.UrlEncode(Redirecturl));
             return new RedirectResult(url);
         }
         /// <summary>
@@ -55,7 +83,7 @@ namespace CoreLogin.Controllers
             var url =
                 string.Format(
                     "https://graph.qq.com/oauth2.0/token?client_id={0}&client_secret={1}&code={2}&grant_type=authorization_code&redirect_uri={3}",
-                    appId, appSecret, code, redirecturl);
+                    AppId, AppSecret, code, Redirecturl);
             HttpWebRequest? request = WebRequest.Create(url) as HttpWebRequest;
             var json = WebRequestHelper.GetResponse(request, "utf-8");
             if (string.IsNullOrEmpty(json))
@@ -97,7 +125,7 @@ namespace CoreLogin.Controllers
         public virtual Dictionary<string, string> GetUserInfo(string token, string openId)
         {
             if (string.IsNullOrEmpty(token)) return null;
-            var url = $"https://graph.qq.com/user/get_user_info?access_token={token}&openid={openId}&oauth_consumer_key={appId}";
+            var url = $"https://graph.qq.com/user/get_user_info?access_token={token}&openid={openId}&oauth_consumer_key={AppId}";
             HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
             var json = WebRequestHelper.GetResponse(request, "utf-8");
             var dis = json.DeserializeJson<Dictionary<string, string>>();

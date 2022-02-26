@@ -4,4 +4,9 @@
 	  <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Extension\Component.csproj" />
+    <ProjectReference Include="..\..\Common\Winner\Winner.csproj" />
+  </ItemGroup>
+
 </Project>

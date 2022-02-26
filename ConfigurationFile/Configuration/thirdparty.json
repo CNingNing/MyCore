@@ -1,6 +1,7 @@
 {
   "QQ": {
     "AppId": "XXX",
-    "AppSecret": "XXXX"
+    "AppSecret": "XXXX",
+    "RedirectUrl": ""
   }
 }

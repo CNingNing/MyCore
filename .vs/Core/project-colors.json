@@ -70,7 +70,17 @@
       "ProjectGuid": "237a8df3-700a-44bd-ad5a-4c3b43b9ceab",
       "DisplayName": "CoreLogin",
       "ColorIndex": 12
+    },
+    "410d8b10-431d-40bd-b1c6-3e220bf07f4f": {
+      "ProjectGuid": "410d8b10-431d-40bd-b1c6-3e220bf07f4f",
+      "DisplayName": "WebCore.Base",
+      "ColorIndex": 13
+    },
+    "fc6c241b-848d-4b7a-8b12-682852f9ed85": {
+      "ProjectGuid": "fc6c241b-848d-4b7a-8b12-682852f9ed85",
+      "DisplayName": "Winner",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 15
 }

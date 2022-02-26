@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tVA7Dke/w4gfWPnpfPPHh7km6JYRTNPM8PJN0DBxg8Q=",
+  "Hash": "fUGXF8CBmPdIEVEDoW6PiddjuFJ7qtiCI3cep36dIPk=",
   "Source": "CoreLogin",
   "BasePath": "_content/CoreLogin",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CoreLogin.bundle.scp.css"
     },
     {
+      "Identity": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\css\\login.css",
+      "SourceId": "CoreLogin",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\",
+      "BasePath": "_content/CoreLogin",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
       "Identity": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\css\\site.css",
       "SourceId": "CoreLogin",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\js\\login.js",
+      "SourceId": "CoreLogin",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\",
+      "BasePath": "_content/CoreLogin",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
       "Identity": "D:\\work\\MyCode\\MyCore\\Web\\Login\\CoreLogin\\wwwroot\\js\\site.js",
