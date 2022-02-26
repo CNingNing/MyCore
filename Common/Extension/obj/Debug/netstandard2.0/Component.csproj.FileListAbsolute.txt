@@ -16,3 +16,13 @@ D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfoI
 D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfo.cs
 D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.dll
 D:\core\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.pdb
+D:\work\MyCode\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.deps.json
+D:\work\MyCode\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.dll
+D:\work\MyCode\MyCore\Common\Extension\bin\Debug\netstandard2.0\Component.pdb
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.csproj.AssemblyReference.cache
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfoInputs.cache
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.AssemblyInfo.cs
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.csproj.CoreCompileInputs.cache
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.dll
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\netstandard2.0\Component.pdb

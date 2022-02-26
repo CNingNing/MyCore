@@ -1,10 +1,10 @@
 ﻿{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:59353",
-      "sslPort": 44346
+      "applicationUrl": "http://127.0.0.1:59999",
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -13,15 +13,17 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "CoreLogin": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "nativeDebugging": true
+    }
+  },
+  "CoreConsole": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "applicationUrl": "http://127.0.0.1:59999",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
     }
   }
-}
+} }

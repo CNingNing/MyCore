@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "ce5c26705a4b3084ec1e5ae240a5c1ab86f85e45"
+    "signature": ""
   },
   "compilationOptions": {},
   "targets": {
@@ -137,28 +137,28 @@
     "Caching.CSRedis/3.0.51": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rJKpub3bLKfwgb9Y2rBoOFzPJu0LnJNO+MOKn4VxPUxB+t2Dg7y3mZnemjWm0kXPbqAZV2K1o1+a08wWnEh0VA==",
+      "sha512": "sha512-OB1wk7Mcf7dciMoc5VzlSslE8CL4vSI/7FT1BDWKEwH0+FM1z+YGovXvkd75XDFXcBWjubeLzzcaPq07A6DHQA==",
       "path": "caching.csredis/3.0.51",
       "hashPath": "caching.csredis.3.0.51.nupkg.sha512"
     },
     "CSRedisCore/3.0.64": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cSM5a5aq19/yYA1jz8SzPhLLCnyktpULAPEA6WuPAekszoU4IM15AjEnOk0TFu5goC8bfJYq+buCEQtReff3Gw==",
+      "sha512": "sha512-QvQVOjZ2MZ5LvrmLqfcURX12uVjv8fw74tw1Mp4rgcQaOsKzT8bIkkhj/ENpCHidvxeAOgYwno+iKqDT9ACdpw==",
       "path": "csrediscore/3.0.64",
       "hashPath": "csrediscore.3.0.64.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1grj/VyEAX2DSxIDyTADPfXnESj33RNvK0Lo1ob1awZA9JDMzmOsS3DC5nOOp74Kcb/4VfcOVFe8YG1ySs156w==",
+      "sha512": "sha512-3d5xYNZhqosir31mohbApOE1Iuci/WOfWit+/Cj6ZxS5SR28SbgskgP8M+ZmBZ5Gy7l1DT7fYikgqpC2tQE/nA==",
       "path": "microsoft.extensions.caching.abstractions/2.1.2",
       "hashPath": "microsoft.extensions.caching.abstractions.2.1.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jVkZs8NkUIhooFh8iJFIGJAJAeTrwORjM06i4sBw+/VVC8zcqduCIG1QCqjxbGACbR+GkLEnhZdxLjL8qHLHIg==",
+      "sha512": "sha512-scJ1GZNIxMmjpENh0UZ8XCQ6vzr/LzeF9WvEA51Ix2OQGAs9WPgPu8ABVUdvpKPLuor/t05gm6menJK3PwqOXg==",
       "path": "microsoft.extensions.primitives/2.1.1",
       "hashPath": "microsoft.extensions.primitives.2.1.1.nupkg.sha512"
     },
@@ -179,14 +179,14 @@
     "Newtonsoft.Json/12.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "SafeObjectPool/2.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9RW1PHNsZSX8GRxJPHspvA3AyV61iv4cDUKrtjJS2I61rV+e3G8s3hDoHQgo0XkeNSYbI1n4UmPX6VpAeofjQA==",
+      "sha512": "sha512-r9waDVDFBV4HY0Lrt3xdIvQBR5rxNsE10o7p16lrYYSVTb6p7QeJAKV21E5DJJ0nw+oUayuUVTPskS7mohHWDw==",
       "path": "safeobjectpool/2.0.2",
       "hashPath": "safeobjectpool.2.0.2.nupkg.sha512"
     },
@@ -200,7 +200,7 @@
     "System.Memory/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oonnLQPZAGD21qtNMG4EtVmbYOInk2jV7M+g108B6OHOb67ZOaWnA/K8P5oQ6uK9wxKzB1iEXSChQOi2scKOqA==",
+      "sha512": "sha512-sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
       "path": "system.memory/4.5.1",
       "hashPath": "system.memory.4.5.1.nupkg.sha512"
     },
@@ -214,14 +214,14 @@
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
+      "sha512": "sha512-Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
     },
     "System.ValueTuple/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     }
