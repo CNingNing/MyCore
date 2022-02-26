@@ -1,0 +1,11 @@
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Configuration.deps.json
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Configuration.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\ref\Configuration.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\bin\Debug\net6.0\Configuration.pdb
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.AssemblyInfoInputs.cache
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.AssemblyInfo.cs
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.csproj.CoreCompileInputs.cache
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\ref\Configuration.dll
+D:\work\MyCode\MyCore\ConfigurationFile\Configuration\obj\Debug\net6.0\Configuration.pdb

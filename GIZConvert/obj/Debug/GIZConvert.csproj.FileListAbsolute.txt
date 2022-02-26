@@ -9,3 +9,15 @@ D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.exe
 D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.pdb
 D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.Form2.resources
 D:\core\MyCore\GIZConvert\obj\Debug\GIZConvert.csprojAssemblyReference.cache
+D:\work\MyCode\MyCore\GIZConvert\bin\Debug\GIZConvert.exe.config
+D:\work\MyCode\MyCore\GIZConvert\bin\Debug\GIZConvert.exe
+D:\work\MyCode\MyCore\GIZConvert\bin\Debug\GIZConvert.pdb
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.AssemblyReference.cache
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.SuggestedBindingRedirects.cache
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.Form1.resources
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.Form2.resources
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.Properties.Resources.resources
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.GenerateResource.cache
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.csproj.CoreCompileInputs.cache
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.exe
+D:\work\MyCode\MyCore\GIZConvert\obj\Debug\GIZConvert.pdb

@@ -1,0 +1,171 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Entity/1.0.0": {
+        "dependencies": {
+          "Component": "1.0.0"
+        },
+        "runtime": {
+          "Entity.dll": {}
+        }
+      },
+      "Caching.CSRedis/3.0.51": {
+        "dependencies": {
+          "CSRedisCore": "3.0.64",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Caching.CSRedis.dll": {
+            "assemblyVersion": "3.0.51.0",
+            "fileVersion": "3.0.51.0"
+          }
+        }
+      },
+      "CSRedisCore/3.0.64": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "SafeObjectPool": "2.0.2",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CSRedisCore.dll": {
+            "assemblyVersion": "3.0.64.0",
+            "fileVersion": "3.0.64.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/2.1.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.18207"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.1.1": {
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "SafeObjectPool/2.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/SafeObjectPool.dll": {
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
+          }
+        }
+      },
+      "System.Memory/4.5.1": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {},
+      "System.ValueTuple/4.5.0": {},
+      "Component/1.0.0": {
+        "dependencies": {
+          "CSRedisCore": "3.0.64",
+          "Caching.CSRedis": "3.0.51",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "Component.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Caching.CSRedis/3.0.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OB1wk7Mcf7dciMoc5VzlSslE8CL4vSI/7FT1BDWKEwH0+FM1z+YGovXvkd75XDFXcBWjubeLzzcaPq07A6DHQA==",
+      "path": "caching.csredis/3.0.51",
+      "hashPath": "caching.csredis.3.0.51.nupkg.sha512"
+    },
+    "CSRedisCore/3.0.64": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QvQVOjZ2MZ5LvrmLqfcURX12uVjv8fw74tw1Mp4rgcQaOsKzT8bIkkhj/ENpCHidvxeAOgYwno+iKqDT9ACdpw==",
+      "path": "csrediscore/3.0.64",
+      "hashPath": "csrediscore.3.0.64.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3d5xYNZhqosir31mohbApOE1Iuci/WOfWit+/Cj6ZxS5SR28SbgskgP8M+ZmBZ5Gy7l1DT7fYikgqpC2tQE/nA==",
+      "path": "microsoft.extensions.caching.abstractions/2.1.2",
+      "hashPath": "microsoft.extensions.caching.abstractions.2.1.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-scJ1GZNIxMmjpENh0UZ8XCQ6vzr/LzeF9WvEA51Ix2OQGAs9WPgPu8ABVUdvpKPLuor/t05gm6menJK3PwqOXg==",
+      "path": "microsoft.extensions.primitives/2.1.1",
+      "hashPath": "microsoft.extensions.primitives.2.1.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "SafeObjectPool/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r9waDVDFBV4HY0Lrt3xdIvQBR5rxNsE10o7p16lrYYSVTb6p7QeJAKV21E5DJJ0nw+oUayuUVTPskS7mohHWDw==",
+      "path": "safeobjectpool/2.0.2",
+      "hashPath": "safeobjectpool.2.0.2.nupkg.sha512"
+    },
+    "System.Memory/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
+      "path": "system.memory/4.5.1",
+      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "Component/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

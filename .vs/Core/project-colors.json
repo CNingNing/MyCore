@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "775c7aed-7eb2-402d-bbb5-30beef7be5e2": {
+      "ProjectGuid": "775c7aed-7eb2-402d-bbb5-30beef7be5e2",
+      "DisplayName": "CoreConsole",
+      "ColorIndex": 0
+    },
+    "9a612fd9-e64e-4f13-a3dd-c5db7dfc13dd": {
+      "ProjectGuid": "9a612fd9-e64e-4f13-a3dd-c5db7dfc13dd",
+      "DisplayName": "CoreLogin",
+      "ColorIndex": 1
+    },
+    "4d1b0ede-c445-43cb-94db-137b95b237ad": {
+      "ProjectGuid": "4d1b0ede-c445-43cb-94db-137b95b237ad",
+      "DisplayName": "HrApi",
+      "ColorIndex": 2
+    },
+    "f786a19c-c9fb-47b7-912f-fe32f6edc89f": {
+      "ProjectGuid": "f786a19c-c9fb-47b7-912f-fe32f6edc89f",
+      "DisplayName": "HrWebsite",
+      "ColorIndex": 3
+    },
+    "848763b2-a438-4870-a728-5fdf1e7a138e": {
+      "ProjectGuid": "848763b2-a438-4870-a728-5fdf1e7a138e",
+      "DisplayName": "Test",
+      "ColorIndex": 4
+    },
+    "e0616858-a9d7-4520-be7b-2a80de91036c": {
+      "ProjectGuid": "e0616858-a9d7-4520-be7b-2a80de91036c",
+      "DisplayName": "Tool.Copy",
+      "ColorIndex": 5
+    },
+    "f6f2aa75-1940-49f7-90e6-14a5c28c28f6": {
+      "ProjectGuid": "f6f2aa75-1940-49f7-90e6-14a5c28c28f6",
+      "DisplayName": "GIZConvert",
+      "ColorIndex": 6
+    },
+    "d6bc922c-c95d-40bc-95af-550132d40380": {
+      "ProjectGuid": "d6bc922c-c95d-40bc-95af-550132d40380",
+      "DisplayName": "Component",
+      "ColorIndex": 7
+    },
+    "1fb4ea13-7edb-4d1a-b9a4-b397e82e2344": {
+      "ProjectGuid": "1fb4ea13-7edb-4d1a-b9a4-b397e82e2344",
+      "DisplayName": "Configuration",
+      "ColorIndex": 8
+    },
+    "e9623173-4a9b-46e9-8639-dda41204e7ce": {
+      "ProjectGuid": "e9623173-4a9b-46e9-8639-dda41204e7ce",
+      "DisplayName": "Entity",
+      "ColorIndex": 9
+    },
+    "e694f93b-c6bc-4d4a-9001-1b282d2c5d22": {
+      "ProjectGuid": "e694f93b-c6bc-4d4a-9001-1b282d2c5d22",
+      "DisplayName": "DBModels",
+      "ColorIndex": 10
+    }
+  },
+  "NextColorIndex": 11
+}

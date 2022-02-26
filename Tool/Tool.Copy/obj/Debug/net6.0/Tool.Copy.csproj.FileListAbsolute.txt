@@ -1,0 +1,14 @@
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\Tool.Copy.exe
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\Tool.Copy.deps.json
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\Tool.Copy.runtimeconfig.json
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\Tool.Copy.dll
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\ref\Tool.Copy.dll
+D:\work\MyCode\MyCore\Tool\Tool.Copy\bin\Debug\net6.0\Tool.Copy.pdb
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.AssemblyInfoInputs.cache
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.AssemblyInfo.cs
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.csproj.CoreCompileInputs.cache
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.dll
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\ref\Tool.Copy.dll
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.pdb
+D:\work\MyCode\MyCore\Tool\Tool.Copy\obj\Debug\net6.0\Tool.Copy.genruntimeconfig.cache
