@@ -18,8 +18,7 @@ namespace CoreLogin.Controllers
         public const string appId = "";
         public const string appSecret = "";
         public const string redirecturl = "";
-        [HttpPost]
-        public IActionResult Index()
+        public virtual IActionResult Index()
         {
             return View();
         }
