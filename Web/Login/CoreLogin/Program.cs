@@ -1,4 +1,8 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+//using Microsoft.AspNetCore.HttpOverrides; 
+
+
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -17,7 +21,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+//app.UseForwardedHeaders(new ForwardedHeadersOptions
+//{
+//    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+//});
 app.UseAuthorization();
 
 app.MapControllerRoute(

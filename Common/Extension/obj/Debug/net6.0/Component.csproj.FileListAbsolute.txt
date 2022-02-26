@@ -9,3 +9,4 @@ D:\work\MyCode\MyCore\Common\Extension\obj\Debug\net6.0\Component.csproj.CoreCom
 D:\work\MyCode\MyCore\Common\Extension\obj\Debug\net6.0\Component.dll
 D:\work\MyCode\MyCore\Common\Extension\obj\Debug\net6.0\ref\Component.dll
 D:\work\MyCode\MyCore\Common\Extension\obj\Debug\net6.0\Component.pdb
+D:\work\MyCode\MyCore\Common\Extension\obj\Debug\net6.0\Component.csproj.AssemblyReference.cache

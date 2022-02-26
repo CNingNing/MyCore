@@ -60,7 +60,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "杂项文件",
       "ColorIndex": -1
+    },
+    "80cf953d-c4a7-4ebf-aa13-339cbaa07d60": {
+      "ProjectGuid": "80cf953d-c4a7-4ebf-aa13-339cbaa07d60",
+      "DisplayName": "Login",
+      "ColorIndex": 11
+    },
+    "237a8df3-700a-44bd-ad5a-4c3b43b9ceab": {
+      "ProjectGuid": "237a8df3-700a-44bd-ad5a-4c3b43b9ceab",
+      "DisplayName": "CoreLogin",
+      "ColorIndex": 12
     }
   },
-  "NextColorIndex": 11
+  "NextColorIndex": 13
 }
