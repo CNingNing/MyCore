@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{BA8025B7-39AB-4042-8CCF-1CA566E05E87}"
 EndProject
@@ -35,13 +35,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8DCA2E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Login", "Login", "{AB8B0804-95D1-44CC-AB2E-845F48AF5C23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLogin", "CoreLogin\CoreLogin.csproj", "{9A612FD9-E64E-4F13-A3DD-C5DB7DFC13DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLogin", "Web\Login\CoreLogin\CoreLogin.csproj", "{9A612FD9-E64E-4F13-A3DD-C5DB7DFC13DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreConsole", "Web\Login\CoreConsole\CoreConsole.csproj", "{775C7AED-7EB2-402D-BBB5-30BEEF7BE5E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIZConvert", "GIZConvert\GIZConvert.csproj", "{F6F2AA75-1940-49F7-90E6-14A5C28C28F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "ConfigurationFile\Entity\Entity.csproj", "{E9623173-4A9B-46E9-8639-DDA41204E7CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "ConfigurationFile\Entity\Entity.csproj", "{E9623173-4A9B-46E9-8639-DDA41204E7CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
