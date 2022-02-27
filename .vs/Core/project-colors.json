@@ -80,7 +80,12 @@
       "ProjectGuid": "fc6c241b-848d-4b7a-8b12-682852f9ed85",
       "DisplayName": "Winner",
       "ColorIndex": 14
+    },
+    "e8f82077-a0db-49eb-9c78-39476cbf80ae": {
+      "ProjectGuid": "e8f82077-a0db-49eb-9c78-39476cbf80ae",
+      "DisplayName": "template",
+      "ColorIndex": 15
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 0
 }

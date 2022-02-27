@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore.Base", "Web\WebCore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Winner", "Common\Winner\Winner.csproj", "{FC6C241B-848D-4B7A-8B12-682852F9ED85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Web\Template\Template.csproj", "{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{FC6C241B-848D-4B7A-8B12-682852F9ED85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC6C241B-848D-4B7A-8B12-682852F9ED85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC6C241B-848D-4B7A-8B12-682852F9ED85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,6 +138,7 @@ Global
 		{237A8DF3-700A-44BD-AD5A-4C3B43B9CEAB} = {AB8B0804-95D1-44CC-AB2E-845F48AF5C23}
 		{410D8B10-431D-40BD-B1C6-3E220BF07F4F} = {BA8025B7-39AB-4042-8CCF-1CA566E05E87}
 		{FC6C241B-848D-4B7A-8B12-682852F9ED85} = {78475436-F999-4E1F-8507-B5DB1018AF49}
+		{30A180A9-5D6B-45EC-AA5D-AED3BF6F25B5} = {BA8025B7-39AB-4042-8CCF-1CA566E05E87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6D2C3A-77FF-4733-A908-A28FC3C6229D}

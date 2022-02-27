@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section styles{
+    <link  rel="stylesheet"  href="/css/login.css"asp-append-version="true" />
+}
+    <div id="login">  
+        <h1>Login</h1>  
+        <form method="post" action="/login/checklogin">  
+            <input type="text" required="required" placeholder="用户名" name="LoginName" />
+            <input type="password" required="required" placeholder="密码" name="LoginPassword">  
+            <button class="but" type="submit">登录</button>  
+        </form>  
+    </div>  

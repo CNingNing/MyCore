@@ -1,0 +1,132 @@
+Presentation\Admin Beeant.Presentation.Admin.Configurator
+Presentation\Admin Beeant.Presentation.Admin.Home 
+
+Presentation\Agent Beeant.Presentation.Agent.Open.Flight
+Presentation\Agent Beeant.Presentation.Agent.Open.FlightDynamic
+Presentation\Agent Beeant.Presentation.Agent.Open.Home
+Presentation\Agent Beeant.Presentation.Agent.Open.Hotel
+Presentation\Agent Beeant.Presentation.Agent.Open.InternationalHotel
+Presentation\Agent Beeant.Presentation.Agent.Open.Order
+Presentation\Agent Beeant.Presentation.Agent.Open.Train
+Presentation\Agent Beeant.Presentation.Agent.Report.Analysis
+Presentation\Agent Beeant.Presentation.Agent.Report.Sales
+Presentation\Agent Beeant.Presentation.Agent.Service.Hotel
+Presentation\Agent Beeant.Presentation.Agent.Service.Ibe
+Presentation\Agent Beeant.Presentation.Agent.Service.Train
+Presentation\Agent Beeant.Presentation.Agent.Service.Reception
+Presentation\Agent Beeant.Presentation.Agent.Website.Admin
+Presentation\Agent Beeant.Presentation.Agent.Website.Finance
+Presentation\Agent Beeant.Presentation.Agent.Website.Home
+Presentation\Agent Beeant.Presentation.Agent.Website.Order
+
+Presentation\Api Beeant.Presentation.Api.Account
+Presentation\Api Beeant.Presentation.Api.Home
+Presentation\Api Beeant.Presentation.Api.Log
+Presentation\Api Beeant.Presentation.Api.Login
+Presentation\Api Beeant.Presentation.Api.Member
+Presentation\Api Beeant.Presentation.Api.Password
+Presentation\Api Beeant.Presentation.Api.Register
+
+Presentation\Bfs Beeant.Presentation.Bfs.Api
+Presentation\Bfs Beeant.Presentation.Bfs.Website
+
+Presentation\Bpm Beeant.Presentation.Bpm.Api.Expense
+Presentation\Bpm Beeant.Presentation.Bpm.Api.Home
+Presentation\Bpm Beeant.Presentation.Bpm.Api.Order
+Presentation\Bpm Beeant.Presentation.Bpm.Website.Admin
+Presentation\Bpm Beeant.Presentation.Bpm.Website.Expense
+Presentation\Bpm Beeant.Presentation.Bpm.Website.Order
+Presentation\Bpm Beeant.Presentation.Bpm.Website.Report
+
+Presentation\Client Beeant.Presentation.Client.App
+
+Presentation\Crm Beeant.Presentation.Crm.Api
+Presentation\Crm Beeant.Presentation.Crm.Website
+
+Presentation\Hr Beeant.Presentation.Hr.Api
+Presentation\Hr Beeant.Presentation.Hr.Website
+
+Presentation\Mms Beeant.Presentation.Mms.Api.Admin
+Presentation\Mms Beeant.Presentation.Mms.Api.Buy
+Presentation\Mms Beeant.Presentation.Mms.Api.Home
+Presentation\Mms Beeant.Presentation.Mms.Api.Member
+Presentation\Mms Beeant.Presentation.Mms.Api.Order
+Presentation\Mms Beeant.Presentation.Mms.Api.Pay
+Presentation\Mms Beeant.Presentation.Mms.Api.Product
+Presentation\Mms Beeant.Presentation.Mms.Api.Shopcart
+Presentation\Mms Beeant.Presentation.Mms.Api.Store
+Presentation\Mms Beeant.Presentation.Mms.Website.Admin
+Presentation\Mms Beeant.Presentation.Mms.Website.Home
+
+Presentation\Mobile Beeant.Presentation.Mobile.Home
+Presentation\Mobile Beeant.Presentation.Mobile.Login
+Presentation\Mobile Beeant.Presentation.Mobile.Member
+Presentation\Mobile Beeant.Presentation.Mobile.Password
+Presentation\Mobile Beeant.Presentation.Mobile.Register
+
+Presentation\Open Beeant.Presentation.Open.Account
+Presentation\Open Beeant.Presentation.Open.Home
+
+Presentation\Service Beeant.Presentation.Service.Cluster
+Presentation\Service Beeant.Presentation.Service.Document
+Presentation\Service Beeant.Presentation.Service.Download
+Presentation\Service Beeant.Presentation.Service.Image
+Presentation\Service Beeant.Presentation.Service.Pay
+Presentation\Service Beeant.Presentation.Service.Reception
+Presentation\Service Beeant.Presentation.Service.Shared
+Presentation\Service Beeant.Presentation.Service.ShortUrl
+Presentation\Service Beeant.Presentation.Service.Temp
+Presentation\Service Beeant.Presentation.Service.Version 
+Presentation\Service Beeant.Presentation.Service.Video
+Presentation\Service Beeant.Presentation.Service.WebSocket
+
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Book
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Car
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Flight
+Presentation\Tmc Beeant.Presentation.Tmc.Api.FlightDynamic
+Presentation\Tmc Beeant.Presentation.Tmc.Api.FlightGp
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Forward
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Home
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Hotel
+Presentation\Tmc Beeant.Presentation.Tmc.Api.InternationalFlight
+Presentation\Tmc Beeant.Presentation.Tmc.Api.InternationalHotel
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Order
+Presentation\Tmc Beeant.Presentation.Tmc.Api.Train
+Presentation\Tmc Beeant.Presentation.Tmc.Api.RentalCar
+
+Presentation\Tmc Beeant.Presentation.Tmc.Distribution.Hotel
+Presentation\Tmc Beeant.Presentation.Tmc.Service.Reception
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Book
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Flight
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Hotel
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Order
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Car
+Presentation\Tmc Beeant.Presentation.Tmc.Tourist.Train
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Admin
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Book
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Flight
+Presentation\Tmc Beeant.Presentation.Tmc.Website.FlightDynamic
+Presentation\Tmc Beeant.Presentation.Tmc.Website.FlightGp
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Home
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Hotel
+Presentation\Tmc Beeant.Presentation.Tmc.Website.InternationalFlight
+Presentation\Tmc Beeant.Presentation.Tmc.Website.InternationalHotel
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Flow
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Order
+Presentation\Tmc Beeant.Presentation.Tmc.Website.Train
+
+Presentation\Website Beeant.Presentation.Website.Console
+Presentation\Website Beeant.Presentation.Website.Home
+Presentation\Website Beeant.Presentation.Website.Login
+Presentation\Website Beeant.Presentation.Website.Member
+Presentation\Website Beeant.Presentation.Website.Password
+Presentation\Website Beeant.Presentation.Website.Register
+
+Presentation\Workflow Beeant.Presentation.Workflow.Admin
+Presentation\Workflow Beeant.Presentation.Workflow.Api
+Presentation\Workflow Beeant.Presentation.Workflow.Open
+Presentation\Workflow Beeant.Presentation.Workflow.Report
+Presentation\Workflow Beeant.Presentation.Workflow.Website
+
+Presentation\Feature Beeant.Presentation.Feature.Ronglv
+

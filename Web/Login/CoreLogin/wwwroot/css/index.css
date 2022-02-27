@@ -1,0 +1,249 @@
+html{
+	background:pink;
+    height: 100%;	
+}
+/*×îÍâ²ãÈÝÆ÷ÑùÊ½*/
+.wrap{
+	width: 10px;
+	height: 10px;
+	/*¸Ä±ä×óÓÒÉÏÏÂ,Í¼Æ¬·½¿éÒÆ¶¯*/
+	margin: 40vh 20vw;
+	position: relative;
+	z-index:999
+	
+}
+/*°ü¹üËùÓÐÈÝÆ÷ÑùÊ½*/
+.cube{
+	width:600px;
+	height:400px;
+	margin: 0 auto;
+	transform-style: preserve-3d;
+	transform: rotateX(-30deg) rotateY(-80deg);
+	-webkit-animation: rotate 20s infinite;
+	/*ÔÈËÙ*/
+	animation-timing-function: linear;
+}
+@-webkit-keyframes rotate{
+	from{transform: rotateX(0deg) rotateY(0deg);}
+	to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cube div{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	opacity: 0.8;
+	transition: all .4s;
+}
+/*¶¨ÒåËùÓÐÍ¼Æ¬ÑùÊ½*/
+.pic{
+	width: 300px;
+	height: 300px;
+}
+.cube .out_front{
+	transform: rotateY(0deg) translateZ(150px);
+}
+.cube .out_back{
+	transform: translateZ(-150px) rotateY(180deg);
+}
+.cube .out_left{
+	transform: rotateY(90deg) translateZ(150px);
+}
+.cube .out_right{
+	transform: rotateY(-90deg) translateZ(150px);
+}
+.cube .out_top{
+	transform: rotateX(90deg) translateZ(150px);
+}
+.cube .out_bottom{
+	transform: rotateX(-90deg) translateZ(150px);
+}
+/*¶¨ÒåÐ¡Õý·½ÌåÑùÊ½*/
+.cube span{
+	display: bloack;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.cube .in_pic{
+	width: 200px;
+	height: 200px;
+}
+.cube .in_front{
+	transform: rotateY(0deg) translateZ(100px);
+}
+.cube .in_back{
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.cube .in_left{
+	transform: rotateY(90deg) translateZ(100px);
+}
+.cube .in_right{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.cube .in_top{
+	transform: rotateX(90deg) translateZ(100px);
+}
+.cube .in_bottom{
+	transform: rotateX(-90deg) translateZ(100px);
+}
+/*Êó±êÒÆÈëºóÑùÊ½*/
+.cube:hover .out_front{
+	transform: rotateY(0deg) translateZ(400px);
+}
+.cube:hover .out_back{
+	transform: translateZ(-400px) rotateY(180deg);
+}
+.cube:hover .out_left{
+	transform: rotateY(90deg) translateZ(400px);
+}
+.cube:hover .out_right{
+	transform: rotateY(-90deg) translateZ(400px);
+}
+.cube:hover .out_top{
+	transform: rotateX(90deg) translateZ(400px);
+}
+.cube:hover .out_bottom{
+	transform: rotateX(-90deg) translateZ(400px);
+}
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden
+}
+
+.svoiceIcon {
+	animation-name: colorswitchs;
+	animation-duration: 3s; /*动画时间*/
+	animation-fill-mode: both; /*播放后的状态*/
+	animation-iteration-count: infinite; /*动作循环的次数：infinite 无限循环*/
+}
+
+@keyframes colorswitchs {
+	0% {
+		color: #0087C9
+	}
+
+	20% {
+		color: #EF4A53
+	}
+
+	40% {
+		color: #804cfa
+	}
+
+	60% {
+		color: #FFB463
+	}
+
+	80% {
+		color: #33D5D4
+	}
+
+	100% {
+		color: #0087C9
+	}
+}
+
+.star {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 40vh;
+	display: none;
+	z-index: 9991
+}
+/*心跳开始 */
+.heart {
+	width: 200px;
+	height: 200px;
+	background: #f00;
+	position: relative;
+	filter: drop-shadow(0px 0px 20px rgb(255,20,20));
+	transform: rotate(45deg);
+	margin: 20px auto;
+}
+
+.heart {
+	animation-name: heartbeat;
+	animation-duration: 1s; /*动画时间*/
+	animation-fill-mode: both; /*播放后的状态*/
+	animation-iteration-count: infinite; /*动作循环的次数：infinite 无限循环*/
+}
+
+	.heart:before, .heart:after {
+		content: "";
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		background: #f00;
+		border-radius: 100px;
+	}
+
+	.heart:before {
+		left: -100px;
+	}
+
+	.heart:after {
+		left: 0;
+		top: -100px;
+	}
+
+@keyframes heartbeat {
+	0% {
+		transform: rotate(45deg) scale(0.8,0.8);
+		opacity: 1;
+	}
+
+	25% {
+		transform: rotate(45deg) scale(1,1);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: rotate(45deg) scale(0.8,0.8);
+		opacity: 1;
+	}
+}
+/* 心跳结束 */
+.music {
+	position: fixed;
+	right: 4%;
+	top: 2%;
+	width: 120px;
+	height: 120px;
+	z-index: 999999;
+	opacity: 0.5
+}
+
+.musicRotate {
+	animation-name: musicrotate;
+	animation-duration: 4s; /*动画时间*/
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear; /* Safari 和 Chrome */
+	animation-fill-mode: both; /*播放后的状态*/
+	animation-iteration-count: infinite; /*动作循环的次数：infinite 无限循环*/
+}
+
+@keyframes musicrotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	25% {
+		-webkit-transform: rotate(90deg);
+	}
+
+	50% {
+		-webkit-transform: rotate(180deg);
+	}
+
+	75% {
+		-webkit-transform: rotate(270deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
