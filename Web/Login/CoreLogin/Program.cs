@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
 builder.Services.AddResponseCompression();
+
 builder.WebHost.UseUrls("http://*:18020");
 
 

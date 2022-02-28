@@ -18,7 +18,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 HttpContextHelper.Initialize(app, env);
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
