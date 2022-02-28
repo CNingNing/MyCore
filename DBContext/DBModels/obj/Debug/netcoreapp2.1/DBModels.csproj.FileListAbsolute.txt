@@ -1,9 +1,0 @@
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.csproj.CoreCompileInputs.cache
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.AssemblyInfoInputs.cache
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.AssemblyInfo.cs
-D:\core\MyCore\DBContext\DBModels\bin\Debug\netcoreapp2.1\DBModels.deps.json
-D:\core\MyCore\DBContext\DBModels\bin\Debug\netcoreapp2.1\DBModels.dll
-D:\core\MyCore\DBContext\DBModels\bin\Debug\netcoreapp2.1\DBModels.pdb
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.dll
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.pdb
-D:\core\MyCore\DBContext\DBModels\obj\Debug\netcoreapp2.1\DBModels.csprojAssemblyReference.cache

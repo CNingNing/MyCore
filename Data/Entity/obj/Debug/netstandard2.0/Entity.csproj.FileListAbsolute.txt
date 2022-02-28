@@ -1,8 +1,0 @@
-D:\core\Core\Data\Entity\bin\Debug\netstandard2.0\Entity.deps.json
-D:\core\Core\Data\Entity\bin\Debug\netstandard2.0\Entity.dll
-D:\core\Core\Data\Entity\bin\Debug\netstandard2.0\Entity.pdb
-D:\core\Core\Data\Entity\obj\Debug\netstandard2.0\Entity.csproj.CoreCompileInputs.cache
-D:\core\Core\Data\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfoInputs.cache
-D:\core\Core\Data\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfo.cs
-D:\core\Core\Data\Entity\obj\Debug\netstandard2.0\Entity.dll
-D:\core\Core\Data\Entity\obj\Debug\netstandard2.0\Entity.pdb
