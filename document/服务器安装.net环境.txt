@@ -1,0 +1,11 @@
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+
+
+ sudo dnc remove 'dotnet*' 'aspnet*' 'netstandard'
+
+ echo 'priority=50' | sudo tee -a /etc/yum.repos.d/microsoft-prod.repo
+
+sudo dnf install dotnet-sdk-6.0
+  
+
+

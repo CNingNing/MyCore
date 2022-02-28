@@ -380,3 +380,4 @@ D:\work\MyCode\MyCore\Web\Login\CoreLogin\bin\Debug\net6.0\Winner.pdb
 D:\work\MyCode\MyCore\Web\Login\CoreLogin\bin\Debug\net6.0\Configuration.pdb
 D:\work\MyCode\MyCore\Web\Login\CoreLogin\bin\Debug\net6.0\WebCore.Base.pdb
 D:\work\MyCode\MyCore\Web\Login\CoreLogin\obj\Debug\net6.0\CoreLogin.MvcApplicationPartsAssemblyInfo.cs
+D:\work\MyCode\MyCore\Web\Login\CoreLogin\bin\Debug\net6.0\host.json

@@ -2,17 +2,14 @@ html{
 	background:pink;
     height: 100%;	
 }
-/*×îÍâ²ãÈÝÆ÷ÑùÊ½*/
 .wrap{
 	width: 10px;
 	height: 10px;
-	/*¸Ä±ä×óÓÒÉÏÏÂ,Í¼Æ¬·½¿éÒÆ¶¯*/
 	margin: 40vh 20vw;
 	position: relative;
 	z-index:999
 	
 }
-/*°ü¹üËùÓÐÈÝÆ÷ÑùÊ½*/
 .cube{
 	width:600px;
 	height:400px;
@@ -20,7 +17,6 @@ html{
 	transform-style: preserve-3d;
 	transform: rotateX(-30deg) rotateY(-80deg);
 	-webkit-animation: rotate 20s infinite;
-	/*ÔÈËÙ*/
 	animation-timing-function: linear;
 }
 @-webkit-keyframes rotate{
@@ -34,7 +30,6 @@ html{
 	opacity: 0.8;
 	transition: all .4s;
 }
-/*¶¨ÒåËùÓÐÍ¼Æ¬ÑùÊ½*/
 .pic{
 	width: 300px;
 	height: 300px;
@@ -57,7 +52,6 @@ html{
 .cube .out_bottom{
 	transform: rotateX(-90deg) translateZ(150px);
 }
-/*¶¨ÒåÐ¡Õý·½ÌåÑùÊ½*/
 .cube span{
 	display: bloack;
 	width: 200px;

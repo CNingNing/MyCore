@@ -10,6 +10,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
 builder.Services.AddResponseCompression();
+builder.WebHost.UseUrls("http://*:18020");
+
+
+
+
 HttpContextHelper.Register(builder.Services);
 var app = builder.Build();
 var env = app.Environment;
@@ -22,7 +27,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 HttpContextHelper.Initialize(app, env);
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

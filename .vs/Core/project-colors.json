@@ -85,7 +85,12 @@
       "ProjectGuid": "e8f82077-a0db-49eb-9c78-39476cbf80ae",
       "DisplayName": "template",
       "ColorIndex": 15
+    },
+    "30a180a9-5d6b-45ec-aa5d-aed3bf6f25b5": {
+      "ProjectGuid": "30a180a9-5d6b-45ec-aa5d-aed3bf6f25b5",
+      "DisplayName": "Template",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }
