@@ -1,0 +1,3 @@
+
+暂时启动--dotnet **.dll   
+当关闭命令客户端如xshell 需要用到命令 nohup dotnet **.dll &

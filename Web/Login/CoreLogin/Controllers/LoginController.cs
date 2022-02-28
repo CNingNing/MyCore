@@ -15,7 +15,7 @@ namespace CoreLogin.Controllers
     public class LoginController : BaseController
     {
         public const string Name = "nprong";
-        public const string Password = "ning@!@#";
+        public const string Password = "19930917";
         public const string Redirecturl = "";
         public const string AppId = "";
         public const string AppSecret = "";
