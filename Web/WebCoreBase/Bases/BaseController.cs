@@ -3,7 +3,7 @@ using WebCore.Extension;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 
-namespace WebCore.Bases
+namespace WebCore.Base
 {
 
     public class BaseController : Controller

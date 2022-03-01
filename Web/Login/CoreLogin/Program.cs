@@ -2,6 +2,7 @@
 
 
 
+using Microsoft.AspNetCore.Authentication.Cookies;
 using WebCore.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
 builder.Services.AddResponseCompression();
-
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Forbidden/";
+    });
+//builder.Services.AddAuthentication("Cookies").AddCookie("Cookies");
 builder.WebHost.UseUrls("http://*:18020");
 
 
@@ -36,7 +44,12 @@ app.UseRouting();
 //{
 //    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 //});
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapRazorPages();
+
+
 app.UseCors(configurePolicy => configurePolicy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
 app.MapControllerRoute(

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using WebCore.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,20 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
 builder.Services.AddResponseCompression();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Forbidden/";
+        options.LoginPath = new PathString("/Login/Index");
+        options.LogoutPath = new PathString("/Login/CheckLogout");
+    });
+//builder.Services.AddSingleton<ITicketStore, MyRedisTicketStore>();
+//builder.Services.AddOptions<CookieAuthenticationOptions>("Cookies")
+//     .Configure<ITicketStore>((o, t) => o.SessionStore = t);
+
+builder.WebHost.UseUrls("http://*:18020");
 
 HttpContextHelper.Register(builder.Services);
 var app = builder.Build();
