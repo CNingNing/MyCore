@@ -127,14 +127,11 @@ namespace CoreLogin.Controllers
         /// <returns></returns>
         public virtual IActionResult QQLogin()
         {
-
-            
-
             var code = Request.Query["code"];
             var token = GetAuthorityAccessToken(code);
             var dis = GetAuthorityOpendIdAndUnionId(token);
             var userInfo = GetUserInfo(token, dis["openid"]);
-            return null;
+            return RedirectToAction("Index", "Home");
         }
 
 

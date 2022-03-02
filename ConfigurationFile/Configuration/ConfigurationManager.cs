@@ -13,23 +13,23 @@ namespace Configuration
     {
         #region 初始化配置文件
         public static object Locker=new object();
-        public static string ConfigRootPath { get; set; }
+        public static string JsonRootPath { get; set; }
 
 
         public static void Initialize()
         {
             lock (Locker)
             {
-                SetConfigRootPath();
-                LoadSettings(ConfigRootPath, @"redis.json");
-                LoadSettings(ConfigRootPath, @"thirdparty.json");
-                LoadSettings(ConfigRootPath, @"url.json");
-                LoadSettings(ConfigRootPath, @"database.json");
+                SetJsonRootPath();
+                LoadSettings(JsonRootPath, @"redis.json");
+                LoadSettings(JsonRootPath, @"thirdparty.json");
+                LoadSettings(JsonRootPath, @"url.json");
+                LoadSettings(JsonRootPath, @"database.json");
 
             }
         }
 
-        public static void SetConfigRootPath()
+        public static void SetJsonRootPath()
         {
             var dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
             while(true)
@@ -37,7 +37,7 @@ namespace Configuration
                 var direct =new DirectoryInfo(Path.Combine(dir.FullName, "ConfigurationFile\\Configuration\\json"));
                 if (direct.Exists)
                 {
-                    ConfigRootPath = $"{dir.FullName}\\ConfigurationFile\\Configuration\\json";
+                    JsonRootPath = $"{dir.FullName}\\ConfigurationFile\\Configuration\\json";
                     break;
                 }
                 dir = dir.Parent;
@@ -82,7 +82,7 @@ namespace Configuration
         {
             fileName = string.IsNullOrEmpty(fileName) ? @"Config/Config.config" : fileName;
             var doc = new XmlDocument();
-            fileName = Path.Combine(ConfigRootPath, fileName);
+            fileName = Path.Combine(JsonRootPath, fileName);
             doc.Load(fileName);
             return doc;
         }
@@ -159,6 +159,7 @@ namespace Configuration
         /// <param name="fileName"></param>
         private static void LoadSettings(string appName,string fileName)
         {
+            if (string.IsNullOrEmpty(appName)) return;
             var file=new FileInfo(Path.Combine(appName, fileName));
             if (!file.Exists) return;
             var filecontent = File.ReadAllText(Path.Combine(appName, fileName));

@@ -26,11 +26,8 @@ namespace Test
 
         static void Main(string[] args)
         {
-            var json = $"callback(\"client_id:\"123\"\")";
-            Regex reg = new Regex(@"\(([^)]*)\)");
-            Match m = reg.Match(json);
-            if (m.Success)
-                Console.Write(m.Result("$1"));
+           var path=AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(path);
 
         }
 
