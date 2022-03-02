@@ -34,10 +34,10 @@ namespace Configuration
             var dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
             while(true)
             {
-                var direct =new DirectoryInfo(Path.Combine(dir.FullName, "ConfigurationFile\\Configuration\\json"));
+                var direct =new DirectoryInfo(Path.Combine(dir.FullName, "ConfigurationFile/Configuration/json"));
                 if (direct.Exists)
                 {
-                    JsonRootPath = $"{dir.FullName}\\ConfigurationFile\\Configuration\\json";
+                    JsonRootPath = $"{dir.FullName}/ConfigurationFile/Configuration/json";
                     break;
                 }
                 dir = dir.Parent;
@@ -159,7 +159,7 @@ namespace Configuration
         /// <param name="fileName"></param>
         private static void LoadSettings(string appName,string fileName)
         {
-            if (string.IsNullOrEmpty(appName)) return;
+            //if (string.IsNullOrEmpty(appName)) return;
             var file=new FileInfo(Path.Combine(appName, fileName));
             if (!file.Exists) return;
             var filecontent = File.ReadAllText(Path.Combine(appName, fileName));
