@@ -4,14 +4,14 @@ using System.Threading.Tasks;
 using Winner;
 using Winner.Filter;
 using Winner.Persistence;
-
+using WebCore.Extension;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace WebCore.Base
 {
 
-    public class ApiBaseController : ControllerBase
+    public class ApiBaseController : Controller
     {
 
         //private IdentityEntity _identity;

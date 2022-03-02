@@ -4,7 +4,7 @@
     "Port": "http://*:18020"
   },
   "CoreReception": {
-    "RealmName":"core.nprong.com",
+    "RealmName": "corereception.nprong.com",
     "Port": "http://*:18010"
   }
 }

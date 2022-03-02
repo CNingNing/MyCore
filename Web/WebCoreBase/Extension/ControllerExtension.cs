@@ -47,8 +47,8 @@ namespace WebCore.Extension
         {
             if (url == null)
                 return new RedirectResult(url);
-            url = Uri.EscapeUriString(url);
-            RedirectResult result = new RedirectResult(url);
+            url = Uri.EscapeDataString(url);
+            RedirectResult result = new(url);
             return result;
         }
 
