@@ -1,12 +1,8 @@
-//using Microsoft.AspNetCore.HttpOverrides; 
-
-
-
 using Microsoft.AspNetCore.Authentication.Cookies;
 using WebCore.Extension;
-using Component.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
@@ -20,16 +16,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = new PathString("/Login/Index");
         options.LogoutPath = new PathString("/Login/CheckLogout");
     });
-//builder.Services.AddAuthentication("Cookies").AddCookie("Cookies");
+//builder.Services.AddSingleton<ITicketStore, MyRedisTicketStore>();
+//builder.Services.AddOptions<CookieAuthenticationOptions>("Cookies")
+//     .Configure<ITicketStore>((o, t) => o.SessionStore = t);
 
-Configuration.ConfigurationManager.Initialize();
-//指定端口，不可为null,当值为null 需要去配置文件中进行配置
-var hosts = Configuration.ConfigurationManager.GetSetting<string>("CoreLogin")?.DeserializeJson<IDictionary<string, string>>()?.Get("Port") ?? null;
-builder.WebHost.UseUrls(hosts);
+builder.WebHost.UseUrls("http://*:18020");
+
 HttpContextHelper.Register(builder.Services);
 var app = builder.Build();
 var env = app.Environment;
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -42,17 +37,11 @@ HttpContextHelper.Initialize(app, env);
 app.UseStaticFiles();
 
 app.UseRouting();
-//app.UseForwardedHeaders(new ForwardedHeadersOptions
-//{
-//    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-//});
-app.UseAuthentication();
-app.UseAuthorization();
 
-app.UseCors(configurePolicy => configurePolicy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

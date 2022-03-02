@@ -23,9 +23,18 @@ namespace CoreLogin.Controllers
         public const string Name = "nprong";
         public const string Password = "19930917";
         public const string Redirecturl = "";
-        public const string AppId = "";
-        public const string AppSecret = "";
-
+        public virtual IDictionary<string,string> QQ
+        {
+            get { return Configuration.ConfigurationManager.GetSetting<string>("QQ")?.DeserializeJson<IDictionary<string, string>>() ?? new Dictionary<string, string>(); }
+        }
+        public virtual string QQAppId
+        {
+            get {return QQ?.Get("AppId")??""; }
+        }
+        public virtual string QQAppSecret
+        {
+            get { return QQ?.Get("AppSecret")??""; }
+        }
 
 
         [AllowAnonymous]
@@ -109,7 +118,7 @@ namespace CoreLogin.Controllers
         {
             var url = string.Format(
                      "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id={0}&redirect_uri={1}&state=State",
-                     AppId, WebUtility.UrlEncode(Redirecturl));
+                     QQAppId, WebUtility.UrlEncode(Redirecturl));
             return new RedirectResult(url);
         }
         /// <summary>
@@ -118,6 +127,9 @@ namespace CoreLogin.Controllers
         /// <returns></returns>
         public virtual IActionResult QQLogin()
         {
+
+            
+
             var code = Request.Query["code"];
             var token = GetAuthorityAccessToken(code);
             var dis = GetAuthorityOpendIdAndUnionId(token);
@@ -133,7 +145,7 @@ namespace CoreLogin.Controllers
             var url =
                 string.Format(
                     "https://graph.qq.com/oauth2.0/token?client_id={0}&client_secret={1}&code={2}&grant_type=authorization_code&redirect_uri={3}",
-                    AppId, AppSecret, code, Redirecturl);
+                    QQAppId, QQAppSecret, code, Redirecturl);
             HttpWebRequest? request = WebRequest.Create(url) as HttpWebRequest;
             var json = WebRequestHelper.GetResponse(request, "utf-8");
             if (string.IsNullOrEmpty(json))
@@ -175,7 +187,7 @@ namespace CoreLogin.Controllers
         public virtual Dictionary<string, string> GetUserInfo(string token, string openId)
         {
             if (string.IsNullOrEmpty(token)) return null;
-            var url = $"https://graph.qq.com/user/get_user_info?access_token={token}&openid={openId}&oauth_consumer_key={AppId}";
+            var url = $"https://graph.qq.com/user/get_user_info?access_token={token}&openid={openId}&oauth_consumer_key={QQAppId}";
             HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
             var json = WebRequestHelper.GetResponse(request, "utf-8");
             var dis = json.DeserializeJson<Dictionary<string, string>>();

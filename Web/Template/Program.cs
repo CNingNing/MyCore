@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using WebCore.Extension;
+using Component.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc().AddNewtonsoftJson();
 builder.Services.AddCors();
@@ -20,8 +20,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 //builder.Services.AddOptions<CookieAuthenticationOptions>("Cookies")
 //     .Configure<ITicketStore>((o, t) => o.SessionStore = t);
 
-builder.WebHost.UseUrls("http://*:18020");
-
+Configuration.ConfigurationManager.Initialize();
+//指定端口，不可为null,当值为null 需要去配置文件中进行配置
+var hosts = Configuration.ConfigurationManager.GetSetting<string>("CoreLogin")?.DeserializeJson<IDictionary<string, string>>()?.Get("Port") ?? null;
+builder.WebHost.UseUrls(hosts);
 HttpContextHelper.Register(builder.Services);
 var app = builder.Build();
 var env = app.Environment;
@@ -38,8 +40,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors(configurePolicy => configurePolicy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

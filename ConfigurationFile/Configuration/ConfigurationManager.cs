@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Xml;
 using Component.Extension;
 
-
 namespace Configuration
 {
     static public class ConfigurationManager
@@ -15,32 +14,30 @@ namespace Configuration
         #region 初始化配置文件
         public static object Locker=new object();
         public static string ConfigRootPath { get; set; }
-      
-   
-    
+
+
+        public static void Initialize()
+        {
+            lock (Locker)
+            {
+                SetConfigRootPath();
+                LoadSettings(ConfigRootPath, @"redis.json");
+                LoadSettings(ConfigRootPath, @"thirdparty.json");
+                LoadSettings(ConfigRootPath, @"url.json");
+                LoadSettings(ConfigRootPath, @"database.json");
+
+            }
+        }
 
         public static void SetConfigRootPath()
         {
             var dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
             while(true)
             {
-                var file =new FileInfo( Path.Combine(dir.FullName, "Config/Config.config"));
-                if (file.Exists)
+                var direct =new DirectoryInfo(Path.Combine(dir.FullName, "ConfigurationFile\\Configuration\\json"));
+                if (direct.Exists)
                 {
-                    ConfigRootPath = dir.FullName;
-                    break;
-                }
-                dir = dir.Parent;
-                if (dir == null)
-                    break;
-            }
-            dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
-            while (true)
-            {
-                var file = new FileInfo(Path.Combine(dir.FullName, "Infrastructure/Configuration/Config/Config.config"));
-                if (file.Exists)
-                {
-                    ConfigRootPath = file.Directory.Parent.FullName;
+                    ConfigRootPath = $"{dir.FullName}\\ConfigurationFile\\Configuration\\json";
                     break;
                 }
                 dir = dir.Parent;
@@ -160,26 +157,16 @@ namespace Configuration
         /// </summary>
         /// <param name="appName"></param>
         /// <param name="fileName"></param>
-        private static void LoadSettings(string appName,string fileName=null)
+        private static void LoadSettings(string appName,string fileName)
         {
-            var doc = GetXmlDocument(fileName);
-            XmlNodeList xmlNodes = doc.SelectNodes("configuration/Settings/App");
-            if(xmlNodes==null || xmlNodes.Count==0)
-                return;
-            foreach (XmlNode xmlNode in xmlNodes)
+            var file=new FileInfo(Path.Combine(appName, fileName));
+            if (!file.Exists) return;
+            var filecontent = File.ReadAllText(Path.Combine(appName, fileName));
+            var dic = filecontent.DeserializeJson<IDictionary<string, object>>();
+            foreach(var key in dic.Keys)
             {
-                if (xmlNode.Attributes == null ||
-                    xmlNode.Attributes["Name"] != null && !string.IsNullOrEmpty(xmlNode.Attributes["Name"].Value) &&
-                    xmlNode.Attributes["Name"].Value != appName)
-                    continue;
-                foreach (XmlNode node in xmlNode.ChildNodes)
-                {
-                    if (node.Attributes == null || node.Attributes["key"] == null || node.Attributes["value"] == null)
-                        continue;
-                    if (Settings.ContainsKey(node.Attributes["key"].Value))
-                        Settings.Remove(node.Attributes["key"].Value);
-                    Settings.Add(node.Attributes["key"].Value, node.Attributes["value"].Value);
-                }
+                if (Settings.ContainsKey(key)) continue;
+                Settings.Add(key, dic.Get(key).ToString());
             }
         }
 

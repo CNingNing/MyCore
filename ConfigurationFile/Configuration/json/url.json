@@ -1,0 +1,10 @@
+{
+  "CoreLogin": {
+    "RealmName": "www.nprong.com",
+    "Port": "http://*:18020"
+  },
+  "CoreReception": {
+    "RealmName":"core.nprong.com",
+    "Port": "http://*:18010"
+  }
+}
