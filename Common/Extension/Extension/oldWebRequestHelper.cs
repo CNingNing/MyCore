@@ -4,36 +4,14 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Component.Extension
 {
-    static public class WebRequestHelper
+    static public class oldWebRequestHelper
     {
-        static readonly HttpClient client = new();
-
-        #region 发送Get
-        public static async Task<string> SendGetRequest(string url)
-        {
-            HttpResponseMessage responseMessage=await client.GetAsync(url);
-            responseMessage.EnsureSuccessStatusCode(); 
-            var response=await responseMessage.Content.ReadAsStringAsync();
-            return response;
-        }
-        public static async Task<string> SendGetRequest(Uri url,string data)
-        {
-            client.BaseAddress = url;
-            var response = await client.GetStringAsync(data);
-            return response;
-
-        }
-        #endregion
-
-
         #region 发送POST
 
         /// <summary>

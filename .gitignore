@@ -30,3 +30,4 @@ bld/
 /ngnix/logs/nginx.pid
 /ngnix/logs/error.log
 /.vs
+/ngnix/logs/access.log.main

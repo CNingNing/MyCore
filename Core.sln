@@ -28,12 +28,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tool.Copy", "Tool\Tool.Copy\Tool.Copy.csproj", "{E0616858-A9D7-4520-BE7B-2A80DE91036C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigurationFile", "ConfigurationFile", "{63B2FEE3-8C2F-4BE8-930A-D00172862249}"
-	ProjectSection(SolutionItems) = preProject
-		ConfigurationFile\Configuration\database.json = ConfigurationFile\Configuration\database.json
-		ConfigurationFile\Configuration\redis.json = ConfigurationFile\Configuration\redis.json
-		ConfigurationFile\Configuration\thirdparty.json = ConfigurationFile\Configuration\thirdparty.json
-		ConfigurationFile\Configuration\url.json = ConfigurationFile\Configuration\url.json
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "ConfigurationFile\Configuration\Configuration.csproj", "{1FB4EA13-7EDB-4D1A-B9A4-B397E82E2344}"
 EndProject
