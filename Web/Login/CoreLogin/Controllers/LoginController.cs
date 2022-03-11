@@ -8,6 +8,7 @@ using WebCore.Base;
 using WebCore.Base.Auth;
 using System.Net;
 using Component.Extension;
+using Component.ThirdPartySdk;
 using System.Text.RegularExpressions;
 using WebCore.Extension;
 using System.Security.Claims;
@@ -116,10 +117,8 @@ namespace CoreLogin.Controllers
         /// <returns></returns>
         public virtual IActionResult QqAuthorize()
         {
-            var url = string.Format(
-                     "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id={0}&redirect_uri={1}&state=State",
-                     QQAppId, WebUtility.UrlEncode(Redirecturl));
-            return new RedirectResult(url);
+            var qq = new QqSdk(QQAppId, QQAppSecret);
+            return new RedirectResult(qq.QqAuthorize(Redirecturl));
         }
         /// <summary>
         /// QQ回掉方法
@@ -128,74 +127,24 @@ namespace CoreLogin.Controllers
         public virtual IActionResult QQLogin()
         {
             var code = Request.Query["code"];
-            var token = GetAuthorityAccessToken(code).GetAwaiter().GetResult();
-            var dis = GetAuthorityOpendIdAndUnionId(token);
-            var userInfo = GetUserInfo(token, dis["openid"]);
+            var qq = new QqSdk(QQAppId, QQAppSecret);
+            var token = qq.GetToken(code, Redirecturl);
+            if(string.IsNullOrEmpty(token))
+            {
+                return Content("获取token失败!");
+            }
+            var result=qq.GetAuthorityOpendIdAndUnionId(token);
+            if(result==null)
+            {
+                return Content("获取openId失败!");
+            }
+            var dic=result.DeserializeJson<Dictionary<string, object>>();
+            var openId = dic.Get("openid")?.ToString();
+            var userInfo = qq.GetUserInfo(token, openId);
             return RedirectToAction("Index", "Home");
         }
 
-
-        public virtual async Task<string> GetAuthorityAccessToken(string code)
-        {
-            if (string.IsNullOrEmpty(code))
-                return null;
-            var url =
-                string.Format(
-                    "https://graph.qq.com/oauth2.0/token?client_id={0}&client_secret={1}&code={2}&grant_type=authorization_code&redirect_uri={3}",
-                    QQAppId, QQAppSecret, code, Redirecturl);
-
-            HttpClient client = new();
-            HttpResponseMessage responseMessage= await client.GetAsync(url);
-            responseMessage.EnsureSuccessStatusCode();
-            string json=await responseMessage.Content.ReadAsStringAsync();
-            
-            if (string.IsNullOrEmpty(json))
-                return null;
-            if (!json.Contains("access_token"))
-            {
-                return null;
-            }
-            var dis = json.Split('&').Where(it => it.Contains("access_token")).FirstOrDefault();
-            var accessToken = dis?.Split('=')[1];
-            return accessToken;
-        }
-        /// <summary>
-        /// 获取OpenId和UnionId
-        /// </summary>
-        /// <param name="token"></param>
-        /// <returns></returns>
-        public virtual Dictionary<string, string> GetAuthorityOpendIdAndUnionId(string token)
-        {
-            if (string.IsNullOrEmpty(token)) return null;
-            var url = $"https://graph.qq.com/oauth2.0/me?access_token={token}&unionid=1";
-            HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
-            request.Method = "GET";
-            request.ContentType = "application/x-www-form-urlencoded";
-            var json = oldWebRequestHelper.GetResponse(request, "utf-8");
-            if (string.IsNullOrEmpty(json) || json.Contains("error") || !json.Contains("callback"))
-                return null;
-            Regex reg = new Regex(@"\(([^)]*)\)");
-            Match m = reg.Match(json);
-            var dis = m.Result("$1").DeserializeJson<Dictionary<string, string>>();
-            return dis;
-        }
-        /// <summary>
-        /// 获取用户的基本信息
-        /// </summary>
-        /// <param name="token"></param>
-        /// <param name="openId"></param>
-        /// <returns></returns>
-        public virtual Dictionary<string, string> GetUserInfo(string token, string openId)
-        {
-            if (string.IsNullOrEmpty(token)) return null;
-            var url = $"https://graph.qq.com/user/get_user_info?access_token={token}&openid={openId}&oauth_consumer_key={QQAppId}";
-            HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
-            var json = oldWebRequestHelper.GetResponse(request, "utf-8");
-            var dis = json.DeserializeJson<Dictionary<string, string>>();
-            if (dis.ContainsKey("ret") && dis["ret"] != "0")
-                return null;
-            return dis;
-        }
+       
         #endregion
 
     }

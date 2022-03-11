@@ -15,148 +15,187 @@ namespace Component.Extension
     static public class WebRequestHelper
     {
         static readonly HttpClient client = new();
-
         #region 发送Get
-        public static async Task<string> SendGetRequest(string url)
-        {
-            HttpResponseMessage responseMessage=await client.GetAsync(url);
-            responseMessage.EnsureSuccessStatusCode(); 
-            var response=await responseMessage.Content.ReadAsStringAsync();
-            return response;
-        }
-        public static async Task<string> SendGetRequest(Uri url,string data)
-        {
-            client.BaseAddress = url;
-            var response = await client.GetStringAsync(data);
-            return response;
-
-        }
-        #endregion
-
-
-        #region 发送POST
-
         /// <summary>
-        /// Post请求
+        /// 直接请求Url
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="sParaTemp"></param>
-        /// <param name="isThrowException"></param>
         /// <returns></returns>
-        public static string SendPostRequest(string url, IDictionary<string, string> sParaTemp,bool isThrowException=false)
+        public static async Task<string> SendGetRequestAsync(string url)
         {
-            
-            return SendPostRequest((HttpWebRequest)WebRequest.Create(url), Encoding.UTF8, sParaTemp, isThrowException);
-        }
-
-        /// <summary>
-        ///  Post请求
-        /// </summary>
-        /// <param name="url"></param>
-        /// <param name="encoding"></param>
-        /// <param name="sParaTemp"></param>
-        /// <param name="isThrowException"></param>
-        /// <returns></returns>
-        public static string SendPostRequest(string url, Encoding encoding, IDictionary<string, string> sParaTemp, bool isThrowException = false)
-        {
-           return SendPostRequest((HttpWebRequest) WebRequest.Create(url), encoding, sParaTemp, isThrowException);
-        }
-
-        /// <summary>
-        ///  Post请求
-        /// </summary>
-        /// <param name="url"></param>
-        /// <param name="encoding"></param>
-        /// <param name="isThrowException"></param>
-        /// <returns></returns>
-        public static string SendGetRequest(string url, Encoding encoding, bool isThrowException = false)
-        {
-            return SendRequest((HttpWebRequest)WebRequest.Create(url), encoding, null,"get", isThrowException);
-        }
-
-        /// <summary>
-        ///  Post请求
-        /// </summary>
-        /// <param name="myReq"></param>
-        /// <param name="encoding"></param>
-        /// <param name="sParaTemp"></param>
-        /// <param name="isThrowException"></param>
-        /// <returns></returns>
-        public static string SendPostRequest(HttpWebRequest myReq, Encoding encoding, IDictionary<string, string> sParaTemp, bool isThrowException = false)
-        {
-            return SendRequest(myReq, encoding, sParaTemp, "post", isThrowException);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="myReq"></param>
-        /// <param name="encoding"></param>
-        /// <param name="sParaTemp"></param>
-        /// <param name="method"></param>
-        /// <param name="isThrowException"></param>
-        /// <returns></returns>
-        public static string SendRequest(HttpWebRequest myReq, Encoding encoding, IDictionary<string, string> sParaTemp,string method, bool isThrowException=false)
-        {
-            var sPara = new StringBuilder();
-            if (sParaTemp != null && sParaTemp.Count > 0)
-            {
-                var @params = string.Join("&", sParaTemp.ToList().Select(it => $"{it.Key}={it.Value}"));
-                sPara = new StringBuilder(@params);
-                //foreach (var val in sParaTemp)
-                //{
-                //    //string.Join("&", $"{val.Key}={val.Value}");
-                //    sPara.AppendFormat("{0}={1}&", val.Key, val.Value);
-                //}
-                //sPara.Remove(sPara.Length - 1, 1);
-            }
-            myReq.ContentType = "application/x-www-form-urlencoded";
-            myReq.Method = method;
-            return SendRequest(myReq, encoding, sPara.ToString(), isThrowException);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="myReq"></param>
-        /// <param name="encoding"></param>
-        /// <param name="content"></param>
-        /// <param name="isThrowException"></param>
-        /// <returns></returns>
-        public static string SendRequest(HttpWebRequest myReq, Encoding encoding, string content, bool isZip, bool isThrowException = false)
-        {
-            if (isThrowException)
-                return Request(myReq, encoding, content,false);
             try
             {
-                return Request(myReq, encoding, content, false);
+                HttpResponseMessage responseMessage = await client.GetAsync(url);
+                responseMessage.EnsureSuccessStatusCode();
+                if(responseMessage.StatusCode==  HttpStatusCode.OK)
+                {
+                    var response = await responseMessage.Content.ReadAsStringAsync();
+                    return response;
+                }
+                return null;
+               
             }
-            catch (WebException ex) // 这样我们就能捕获到异常，并且获取服务器端的输出
+            catch(Exception ex)
             {
-                if (ex.Response == null)
-                    throw ex;
-                var wenReq = (HttpWebResponse)ex.Response;
-                if (wenReq == null)
-                    throw ex;
-                var myStream = wenReq.GetResponseStream();
-                if (myStream == null)
-                    throw ex;
-                if (isZip)
-                {
-                    myStream = new GZipStream(myStream, CompressionMode.Decompress);
-                }
-                using (var reader = new StreamReader(myStream, encoding))
-                {
-                    return reader.ReadToEnd();
-                }
+                return ex.Message;
 
             }
-            catch (Exception ex)
-            {
-
-            }
-            return null;
         }
+        /// <summary>
+        /// 带参数请求url
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static async Task<string> SendGetRequestAsync(Uri url,string data)
+        {
+            try
+            {
+                client.BaseAddress = url;
+                var response = await client.GetStringAsync(data);
+                return response;
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
+           
+
+        }
+        /// <summary>
+        /// 请求Url返回字节，并处理
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static async Task<string>SendGetRequestByteAsync(string url)
+        {
+            try
+            {
+                var responseMessage = await client.GetByteArrayAsync(url);
+                var response = Encoding.GetEncoding(Encoding.UTF8.ToString()).GetString(responseMessage);
+                return response;
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+            
+        }
+        /// <summary>
+        /// 请求Url返回流，并处理
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static async Task<string>SendGetRequstStreamAsync(string url)
+        {
+            try
+            {
+                var responseMessage = await client.GetStreamAsync(url);
+                using MemoryStream stream = new();
+                int bytesRead = 0;
+                byte[] buffer = new byte[65530];
+                while ((bytesRead = responseMessage.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    stream.Write(buffer, 0, bytesRead);
+                }
+                var response = Encoding.GetEncoding(Encoding.UTF8.ToString()).GetString(stream.ToArray());
+                return response;
+            }catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            
+        }
+        #endregion
+        #region 发送POST
+        /// <summary>
+        /// application/json形式发送
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public static async Task<string> SendPostAysnc(string url,string request)
+        {
+            try
+            {
+                HttpContent content = new StringContent(request, Encoding.UTF8);
+                var responseMessage = await client.PostAsync(url, content);
+                if(responseMessage.StatusCode==HttpStatusCode.OK)
+                {
+                    if (responseMessage == null)
+                        return null;
+                    var response = await responseMessage.Content.ReadAsStringAsync();
+                    return response;
+                }
+                return null;
+               
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+           
+        }
+        /// <summary>
+        /// multipart/form-data形式发送
+        /// </summary>
+        /// <param name="url">请求地址</param>
+        /// <param name="request">请求体</param>
+        /// <returns></returns>
+        public static async Task<string> SendPostAysnc(string url, IDictionary<string,object>request)
+        {
+            try
+            {
+                HttpContent content = new MultipartFormDataContent(request.SerializeJson());
+                var responseMessage = await client.PostAsync(url, content);
+                if(responseMessage.StatusCode== HttpStatusCode.OK)
+                {
+                    if (responseMessage == null)
+                        return null;
+                    var response = await responseMessage.Content.ReadAsStringAsync();
+                    return response;
+                }
+                return null;
+                
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+            
+        }
+        /// <summary>
+        /// 带授权头的application/json请求
+        /// </summary>
+        /// <param name="url">地址</param>
+        /// <param name="request">请求体</param>
+        /// <param name="useranme">账号</param>
+        /// <param name="userpassword">密码</param>
+        /// <returns></returns>
+        public static async Task<string>SendPostAsync(string url,string request,string useranme,string userpassword)
+        {
+            try
+            {
+                HttpContent content = new StringContent(request, Encoding.UTF8);
+                var value = $"{useranme}:{userpassword}";
+                byte[] bytes = Encoding.UTF8.GetBytes(value);
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(bytes));
+                var responseMessage = await client.PostAsync(url, content);
+                if(responseMessage.StatusCode== HttpStatusCode.OK)
+                {
+                    if (responseMessage == null)
+                        return null;
+                    var response = await responseMessage.Content.ReadAsStringAsync();
+                    return response;
+                }
+                return null;
+            }catch (Exception ex)
+            {
+                return ex.Message;
+            }
+           
+        }
+
+
+
+
 
         /// <summary>
         /// 
@@ -197,83 +236,14 @@ namespace Component.Extension
             return result;
 
         }
-
-
-        /// <summary>
-        ///  Post请求
-        /// </summary>
-        /// <param name="url"></param>
-        /// <param name="encoding"></param>
-        /// <param name="content"></param>
-        /// <param name="contentType"></param>
-        /// <returns></returns>
-        public static string SendPostRequest(string url, Encoding encoding, string content, string contentType= "application/x-www-form-urlencoded")
-        {
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.ContentType= contentType;
-            return SendPostRequest(request, encoding, content);
-        }
-    
-        /// <summary>
-        ///  Post请求
-        /// </summary>
-        /// <param name="myReq"></param>
-        /// <param name="encoding"></param>
-        /// <param name="content"></param>
-        /// <returns></returns>
-        public static string SendPostRequest(HttpWebRequest myReq, Encoding encoding, string content)
-        {
-            myReq.Method = "POST";
-            return SendRequest(myReq, encoding, content,false);
-        }
-
         #endregion
         public static string GetResponse(WebRequest request, string encoding)
         {
-            using (WebResponse response = request.GetResponse())
-            {
-                var stream = response.GetResponseStream();
-                if (stream == null) return null;
-                using (var reader = new StreamReader(stream, Encoding.GetEncoding(encoding)))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
+            using WebResponse response = request.GetResponse();
+            var stream = response.GetResponseStream();
+            if (stream == null) return null;
+            using var reader = new StreamReader(stream, Encoding.GetEncoding(encoding));
+            return reader.ReadToEnd();
         }
-        #region 证书服务
-
-        /// <summary>
-        /// 创建带证书设置的httpwebrequest
-        /// </summary>
-        /// <param name="url">请求地址</param>
-        /// <param name="certFileName">证书名全路径</param>
-        /// <param name="certPassword">证书密码</param>
-        /// <returns></returns>
-        public static WebRequest CreateWebRequestWithCertificate(string url, string certFileName, string certPassword)
-        {
-
-            HttpWebRequest request = null;
-            var cert = CreateX509Certificate(certFileName, certPassword);
-            if (cert != null)
-            {
-                request = (HttpWebRequest)WebRequest.Create(url);
-                request.ClientCertificates.Add(cert);
-            }
-
-            return request;
-        }
-        /// <summary>
-        /// 获取指定证书
-        /// </summary>
-        /// <param name="certFileName">证书名全路径</param>
-        /// <param name="certPassword">证书密码</param>
-        /// <returns></returns>
-        public static X509Certificate2 CreateX509Certificate(string certFileName, string certPassword)
-        {
-            X509Certificate2 cer = new X509Certificate2(certFileName, certPassword,
-X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.Exportable);
-            return cer;
-        }
-        #endregion
     }
 }
