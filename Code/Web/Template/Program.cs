@@ -22,7 +22,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 Configuration.ConfigurationManager.Initialize();
 //指定端口，不可为null,当值为null 需要去配置文件中进行配置
-var hosts = Configuration.ConfigurationManager.GetSetting<string>("CoreLogin")?.DeserializeJson<IDictionary<string, string>>()?.Get("Port") ?? null;
+var hosts = Configuration.ConfigurationManager.GetSetting<string>("TemplatePort")?? null;
 builder.WebHost.UseUrls(hosts);
 HttpContextHelper.Register(builder.Services);
 var app = builder.Build();

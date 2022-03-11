@@ -1,10 +1,11 @@
 {
+  //名称不可修改。
   "CoreLogin": {
-    "RealmName": "www.nprong.com",
+    "UrlName": "http://dev.login.core.com",
     "Port": "http://*:18020"
   },
   "CoreReception": {
-    "RealmName": "corereception.nprong.com",
+    "UrlName": "http://corereception.nprong.com",
     "Port": "http://*:18010"
   }
 }

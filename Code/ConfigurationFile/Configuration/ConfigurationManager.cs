@@ -167,7 +167,17 @@ namespace Configuration
             foreach(var key in dic.Keys)
             {
                 if (Settings.ContainsKey(key)) continue;
-                Settings.Add(key, dic.Get(key).ToString());
+                var val = dic.Get(key).DeserializeJson<IDictionary<string, object>>();
+                if(val==null || !val.ContainsKey("UrlName"))
+                {
+                    Settings.Add(key, dic.Get(key).ToString());
+                    continue;
+                }
+                if(val.ContainsKey("UrlName"))
+                {
+                    Settings.Add(key, val.Get("UrlName").ToString());
+                    Settings.Add($"{key}Port", val?.Get("Port")?.ToString());
+                }
             }
         }
 
