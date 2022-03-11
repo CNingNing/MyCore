@@ -1,5 +1,5 @@
 cd..
-set SolutionDir=%cd%\
+set SolutionDir=%cd%\Code\
 set PublishDir=%cd%\Production\Website
 
 
