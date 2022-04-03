@@ -1,4 +1,5 @@
 {
+  "Domain": "core",
   //名称不可修改。
   "CoreLogin": {
     "UrlName": "http://dev.login.core.com",
