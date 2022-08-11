@@ -8,7 +8,8 @@ using Component.Extension;
 using System.IO.Compression;
 using System.Linq;
 using System.Text.RegularExpressions;
-
+using System.Security.Cryptography;
+using EnterpriseSM;
 namespace Test
 {
     class Program
@@ -26,8 +27,10 @@ namespace Test
 
         static void Main(string[] args)
         {
-           var path=AppDomain.CurrentDomain.BaseDirectory;
-            Console.WriteLine(path);
+            var str = "efd60cd4de9df5793f5a3124b577554d353dc4eb4ec0c21ef2719164851a0641c";
+            var sm4 = Sm4Crypto.Decrypt(str);
+            Console.WriteLine(sm4);
+
 
         }
 
@@ -41,15 +44,34 @@ namespace Test
 
             }
         }
-        public class Manager
-        {
-            public void RemoveMoney()
-            {
-                
-            }
-        }
-            
+        
 
+        /// <summary>
+        /// 得到3DES
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static string Decrypt3Des(string input, string key= "cookieshare71234asdf4567")
+        {
+            if (string.IsNullOrEmpty(input)) return input;
+            var des = TripleDES.Create();
+            des.Key = Encoding.UTF8.GetBytes(key);
+            des.Mode = CipherMode.ECB;
+            des.Padding = PaddingMode.PKCS7;
+            var desDecrypt = des.CreateDecryptor();
+            string result = "";
+            try
+            {
+                byte[] buffer = Convert.FromBase64String(input);
+                result = Encoding.UTF8.GetString(desDecrypt.TransformFinalBlock(buffer, 0, buffer.Length));
+            }
+            catch (Exception)
+            {
+
+            }
+            return result;
+        }
 
         public static byte[] Decompress(byte[] data)
         {
