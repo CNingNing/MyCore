@@ -21,7 +21,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = new PathString("/Login/CheckLogout");
     });
 //builder.Services.AddAuthentication("Cookies").AddCookie("Cookies");
-
+builder.Services.AddControllers();
+builder.Services.AddHttpClient();
 Configuration.ConfigurationManager.Initialize();
 //指定端口，不可为null,当值为null 需要去配置文件中进行配置
 var hosts = Configuration.ConfigurationManager.GetSetting<string>("CoreLoginPort")?? null;

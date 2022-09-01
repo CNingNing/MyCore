@@ -36,7 +36,11 @@ namespace CoreLogin.Controllers
         {
             get { return QQ?.Get("AppSecret")??""; }
         }
-        
+        private readonly IHttpClientFactory _httpClientFactory;
+        public LoginController(IHttpClientFactory httpClientFactory)
+        {
+            this._httpClientFactory = httpClientFactory;
+        }
         
 
 
@@ -107,7 +111,7 @@ namespace CoreLogin.Controllers
         /// <returns></returns>
         public virtual IActionResult QqAuthorize()
         {
-            var qq = new QqSdk(QQAppId, QQAppSecret);
+            var qq = new QqSdk(QQAppId, QQAppSecret,_httpClientFactory);
             return new RedirectResult(qq.QqAuthorize(_redirecturl));
         }
         /// <summary>
@@ -117,13 +121,13 @@ namespace CoreLogin.Controllers
         public virtual async Task<IActionResult> QQLogin()
         {
             var code = Request.Query["code"];
-            var qq = new QqSdk(QQAppId, QQAppSecret);
-            var token = qq.GetToken(code, _redirecturl);
+            var qq = new QqSdk(QQAppId, QQAppSecret, _httpClientFactory);
+            var token =await qq.GetToken(code, _redirecturl);
             if(string.IsNullOrEmpty(token))
             {
                 return Content("获取token失败!");
             }
-            var result=qq.GetAuthorityOpendIdAndUnionId(token);
+            var result=await qq.GetAuthorityOpendIdAndUnionId(token);
             if(result==null)
             {
                 return Content("获取openId失败!");
@@ -133,7 +137,7 @@ namespace CoreLogin.Controllers
             var unionId = dic.Get("unionid")?.ToString() ?? "";
             await SetLoginStatus(openId, unionId);
             var userInfo = qq.GetUserInfo(token, openId);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("TestIndex", "Home");
         }
 
        

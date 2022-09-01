@@ -5,12 +5,16 @@ using WebCore.Base;
 
 namespace CoreLogin.Controllers
 {
+    [Authorize]
     public class HomeController : BaseController
     {
-        [Authorize]
         public IActionResult Index()
         {
             
+            return View();
+        }
+        public IActionResult TestIndex()
+        {
             return View();
         }
     }
